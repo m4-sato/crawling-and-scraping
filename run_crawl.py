@@ -1,83 +1,129 @@
 import httpx
 import asyncio
 import json
-import os  # osモジュールをインポート
+import os
 import logging
+import csv
+import re
+from datetime import datetime
 
 # ロギングの基本設定
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# 環境変数から設定を読み込む。見つからない場合はデフォルト値を使用。
+# 環境変数から設定を読み込む。見つからない場合はデフォルト値を使用する。
 CRAWL4AI_ENDPOINT = os.getenv("CRAWL4AI_ENDPOINT", "http://crawl4ai:11235/crawl")
-# TARGET_URLSはカンマ区切りの文字列として受け取り、リストに変換する
 TARGET_URLS = os.getenv("TARGET_URLS", "https://example.com").split(',')
 
 
-async def crawl():
+def sanitize_url_for_filename(url: str) -> str:
+    """URLを安全なディレクトリ名に変換する"""
+    # プロトコル部分を削除 (e.g., "https://")
+    url_path = re.sub(r'^https?:\/\/', '', url)
+    # ファイル名として無効な文字をアンダースコアに置換
+    sanitized = re.sub(r'[\\/*?:"<>|]', '_', url_path)
+    # 長すぎる場合に切り詰める
+    return sanitized[:100]
+
+
+async def crawl(base_output_dir: str):
     """
     crawl4aiサービスにAPIリクエストを送信し、
-    ストリーミングで結果を受け取る非同期関数。
+    結果をURLごとのフォルダに分けて保存する非同期関数。
     """
-    # タイムアウトを300秒（5分）に設定。大規模なサイトをクロールする際に有効です。
     async with httpx.AsyncClient(timeout=300.0) as client:
         logging.info(f"--- Sending crawl request to crawl4ai service for URLs: {TARGET_URLS} ---")
         try:
-            # サーバーにPOSTリクエストを送信
             response = await client.post(
-                CRAWL4AI_ENDPOINT,  # 環境変数から取得したURLを使用
+                CRAWL4AI_ENDPOINT,
                 json={
-                    "urls": TARGET_URLS,  # 環境変数から取得したURLリストを使用
+                    "urls": TARGET_URLS,
                     "crawler_config": {
                         "type": "CrawlerRunConfig",
                         "params": {
-                            "scraping_strategy": {
-                                "type": "WebScrapingStrategy",
-                                "params": {}
-                            },
-                            "stream": True # ストリームを有効にし、結果を順次受け取る
+                            "scraping_strategy": { "type": "WebScrapingStrategy", "params": {} },
+                            "stream": True
                         }
                     }
                 }
             )
-            
-            # ステータスコードがエラーでないことを確認
             response.raise_for_status()
             logging.info(f"HTTP Request: POST {response.url} \"HTTP/{response.http_version} {response.status_code} {response.reason_phrase}\"")
-
-
         except httpx.RequestError as e:
             logging.error(f"An error occurred while requesting {e.request.url!r}.")
-            logging.error("Please check if the 'crawl4ai' container is running and connected to the same Docker network.")
             return None
-
         except httpx.HTTPStatusError as e:
             logging.error(f"Error response {e.response.status_code} while requesting {e.request.url!r}.")
-            logging.error(f"Response body: {e.response.text}")
             return None
 
-        # ストリームで結果を一行ずつ非同期に処理します
-        results = []
-        logging.info("--- Receiving stream response ---")
+        all_results = []
+        logging.info("--- Receiving stream response and saving to structured files ---")
         async for line in response.aiter_lines():
-            if line:
-                try:
-                    # JSONL形式（1行1JSON）の各行をPythonの辞書に変換
-                    data = json.loads(line)
-                    # 見やすいように整形してコンソールに出力
-                    logging.info(json.dumps(data, indent=2, ensure_ascii=False))
-                    results.append(data)
-                except json.JSONDecodeError:
-                    logging.error(f"Could not decode a line from stream: {line}")
-        
-        return results
+            if not line:
+                continue
+            try:
+                data = json.loads(line)
+                if 'results' in data and isinstance(data['results'], list):
+                    for result_item in data['results']:
+                        url = result_item.get('url')
+                        if not url:
+                            continue
 
-# このスクリプトが直接実行された場合に以下のコードが動作する
+                        # URLごとにユニークなディレクトリを作成
+                        sanitized_url = sanitize_url_for_filename(url)
+                        url_output_dir = os.path.join(base_output_dir, sanitized_url)
+                        os.makedirs(url_output_dir, exist_ok=True)
+                        logging.info(f"Saving results for {url} to {url_output_dir}/")
+
+                        # 1. 本文コンテンツをMarkdownファイルに保存
+                        content = result_item.get('markdown', {}).get('raw_markdown', '').strip()
+                        with open(os.path.join(url_output_dir, 'content.md'), 'w', encoding='utf-8') as f:
+                            f.write(content)
+
+                        # 2. リンク一覧をCSVファイルに保存
+                        links = result_item.get('links', {})
+                        with open(os.path.join(url_output_dir, 'links.csv'), 'w', newline='', encoding='utf-8') as f:
+                            writer = csv.writer(f)
+                            writer.writerow(['type', 'href', 'text', 'base_domain'])
+                            for link_type, link_list in links.items():
+                                if isinstance(link_list, list):
+                                    for link in link_list:
+                                        writer.writerow([
+                                            link_type,
+                                            link.get('href', ''),
+                                            link.get('text', ''),
+                                            link.get('base_domain', '')
+                                        ])
+                        
+                        # 3. メタデータをJSONファイルに保存
+                        metadata = result_item.get('metadata', {})
+                        metadata['crawled_at'] = datetime.now().isoformat()
+                        metadata['original_url'] = url
+                        with open(os.path.join(url_output_dir, 'metadata.json'), 'w', encoding='utf-8') as f:
+                            json.dump(metadata, f, indent=2, ensure_ascii=False)
+                
+                all_results.append(data)
+
+            except json.JSONDecodeError:
+                logging.error(f"Could not decode a line from stream: {line}")
+        
+        return all_results
+
 if __name__ == "__main__":
-    # asyncio.run()で非同期関数crawl()を実行します
-    final_result = asyncio.run(crawl())
+    # 今回の実行結果を保存する親ディレクトリを作成
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    output_dir = f"crawl_output_{timestamp}"
+    os.makedirs(output_dir, exist_ok=True)
     
-    if final_result is not None:
-        logging.info("\n--- Crawling Finished ---")
-        logging.info(f"Total {len(final_result)} data chunks received.")
-    else:
-        logging.error("\n--- Crawling Failed ---")
+    logging.info(f"Results will be saved to directory: {output_dir}")
+    
+    try:
+        final_result = asyncio.run(crawl(output_dir))
+        
+        if final_result is not None:
+            logging.info(f"\n--- Crawling Finished ---")
+            logging.info(f"All data saved in directory: {output_dir}")
+        else:
+            logging.error("\n--- Crawling Failed ---")
+
+    except IOError as e:
+        logging.error(f"Failed to write to file: {e}")

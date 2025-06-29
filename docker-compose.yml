@@ -6,6 +6,9 @@ services:
     # crawl4aiサービスがhealthy状態になるまで待機する
     env_file:
       - .env
+    volumes:
+      - .:/app
+      - /app/.venv
     depends_on:
       crawl4ai:
         condition: service_healthy

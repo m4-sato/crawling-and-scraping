@@ -1,0 +1,15 @@
+{
+  "title": "Welcome to Python.org",
+  "description": "The official home of the Python Programming Language",
+  "keywords": "Python programming language object oriented web free open source software license documentation download community",
+  "author": null,
+  "og:type": "website",
+  "og:site_name": "Python.org",
+  "og:title": "Welcome to Python.org",
+  "og:description": "The official home of the Python Programming Language",
+  "og:image": "https://www.python.org/static/opengraph-icon-200x200.png",
+  "og:image:secure_url": "https://www.python.org/static/opengraph-icon-200x200.png",
+  "og:url": "https://www.python.org/",
+  "crawled_at": "2025-06-29T02:39:43.619304",
+  "original_url": "https://www.python.org"
+}

@@ -1,0 +1,137 @@
+type,href,text,base_domain
+internal,https://www.python.org/#content,Skip to content,python.org
+internal,https://www.python.org/#python-network,▼ Close,python.org
+internal,https://www.python.org/,Python,python.org
+internal,https://www.python.org/psf/,PSF,python.org
+internal,https://docs.python.org,Docs,python.org
+internal,https://www.python.org/jobs/,Jobs,python.org
+internal,https://www.python.org/community/,Community,python.org
+internal,https://www.python.org/#top,▲ The Python Network,python.org
+internal,https://www.python.org/#site-map,≡ Menu,python.org
+internal,https://www.python.org/community/irc/,Chat on IRC,python.org
+internal,https://www.python.org/accounts/login/,Sign In,python.org
+internal,https://www.python.org/accounts/signup/,Sign Up / Register,python.org
+internal,https://www.python.org/about/,About,python.org
+internal,https://www.python.org/about/apps/,Applications,python.org
+internal,https://www.python.org/about/quotes/,Quotes,python.org
+internal,https://www.python.org/about/gettingstarted/,Getting Started,python.org
+internal,https://www.python.org/about/help/,Help,python.org
+internal,https://www.python.org/about,Learn more about Python,python.org
+internal,https://www.python.org/downloads/,Downloads,python.org
+internal,https://www.python.org/downloads/source/,Source code,python.org
+internal,https://www.python.org/downloads/windows/,Windows,python.org
+internal,https://www.python.org/downloads/macos/,macOS,python.org
+internal,https://www.python.org/download/other/,Other Platforms,python.org
+internal,https://docs.python.org/3/license.html,License,python.org
+internal,https://www.python.org/download/alternatives,Alternative Implementations,python.org
+internal,https://www.python.org/ftp/python/3.13.5/Python-3.13.5.tar.xz,Python 3.13.5,python.org
+internal,https://www.python.org/ftp/python/3.13.5/python-3.13.5-amd64.exe,Python 3.13.5,python.org
+internal,https://www.python.org/ftp/python/3.13.5/python-3.13.5-macos11.pkg,Python 3.13.5,python.org
+internal,https://www.python.org/downloads/operating-systems/,View the full list of downloads,python.org
+internal,https://www.python.org/doc/,Documentation,python.org
+internal,https://www.python.org/doc/av,Audio/Visual Talks,python.org
+internal,https://wiki.python.org/moin/BeginnersGuide,Beginner's Guide,python.org
+internal,https://devguide.python.org/,Developer's Guide,python.org
+internal,https://docs.python.org/faq/,FAQ,python.org
+internal,http://wiki.python.org/moin/Languages,Non-English Docs,python.org
+internal,https://peps.python.org,PEP Index,python.org
+internal,https://wiki.python.org/moin/PythonBooks,Python Books,python.org
+internal,https://www.python.org/doc/essays/,Python Essays,python.org
+internal,https://www.python.org/doc/versions/,Documentation page to browse by version,python.org
+internal,https://docs.python.org/3/,Python Docs,python.org
+internal,https://www.python.org/community/diversity/,Diversity,python.org
+internal,https://www.python.org/community/lists/,Mailing Lists,python.org
+internal,https://www.python.org/community/forums/,Forums,python.org
+internal,https://www.python.org/psf/annual-report/2024/,PSF Annual Impact Report,python.org
+internal,https://www.python.org/community/workshops/,Python Conferences,python.org
+internal,https://www.python.org/community/sigs/,Special Interest Groups,python.org
+internal,https://www.python.org/community/logos/,Python Logo,python.org
+internal,https://wiki.python.org/moin/,Python Wiki,python.org
+internal,https://www.python.org/psf/conduct/,Code of Conduct,python.org
+internal,https://www.python.org/community/awards,Community Awards,python.org
+internal,https://www.python.org/psf/get-involved/,Get Involved,python.org
+internal,https://www.python.org/psf/community-stories/,Shared Stories,python.org
+internal,https://www.python.org/success-stories/,Success Stories,python.org
+internal,https://www.python.org/success-stories/category/arts/,Arts,python.org
+internal,https://www.python.org/success-stories/category/business/,Business,python.org
+internal,https://www.python.org/success-stories/category/education/,Education,python.org
+internal,https://www.python.org/success-stories/category/engineering/,Engineering,python.org
+internal,https://www.python.org/success-stories/category/government/,Government,python.org
+internal,https://www.python.org/success-stories/category/scientific/,Scientific,python.org
+internal,https://www.python.org/success-stories/category/software-development/,Software Development,python.org
+internal,https://www.python.org/blogs/,News,python.org
+internal,https://www.python.org/psf/newsletter/,PSF Newsletter,python.org
+internal,http://planetpython.org/,News from the Community,python.org
+internal,https://www.python.org/events/,Events,python.org
+internal,https://www.python.org/events/python-events/,Python Events,python.org
+internal,https://www.python.org/events/python-user-group/,User Group Events,python.org
+internal,https://www.python.org/events/python-events/past/,Python Events Archive,python.org
+internal,https://www.python.org/events/python-user-group/past/,User Group Events Archive,python.org
+internal,https://wiki.python.org/moin/PythonEventsCalendar#Submitting_an_Event,Submit an Event,python.org
+internal,https://www.python.org/shell/,">_
+                        Launch Interactive Shell",python.org
+internal,https://docs.python.org/3/tutorial/controlflow.html#defining-functions,More about defining functions in Python 3,python.org
+internal,https://docs.python.org/3/tutorial/introduction.html#lists,More about lists in Python 3,python.org
+internal,http://docs.python.org/3/tutorial/introduction.html#using-python-as-a-calculator,More about simple math functions in Python 3,python.org
+internal,https://docs.python.org/3/tutorial/controlflow.html,More control flow tools in Python 3,python.org
+internal,https://docs.python.org/3/tutorial/,Whet your appetite,python.org
+internal,https://www.python.org/downloads/release/python-3135/,Python 3.13.5,python.org
+internal,https://jobs.python.org,jobs.python.org,python.org
+internal,https://blog.python.org,More,python.org
+internal,https://www.python.org/events/calendars/,More,python.org
+internal,https://www.python.org/events/python-user-group/2038/,Python New Zealand: Python Learners' Co-op,python.org
+internal,https://www.python.org/events/python-events/1974/,PyCon Colombia 2025,python.org
+internal,https://www.python.org/events/python-events/2002/,Python Norte 2025,python.org
+internal,https://www.python.org/events/python-events/1972/,SciPy 2025,python.org
+internal,https://www.python.org/events/python-user-group/2039/,Python Leiden User Group,python.org
+internal,https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/,"To simplify the adoption of FHE, which involves a complex and resource-intensive technological stack, Zama developed tools that streamline the integration of FHE into applications. Since Python is the de facto standard for building machine learning (ML) applications, it was an obvious choice to create an open-source FHE library in Python.",python.org
+internal,https://www.python.org/about/apps,More,python.org
+internal,http://wiki.python.org/moin/TkInter,tkInter,python.org
+internal,http://www.wxpython.org/,wxPython,python.org
+internal,http://ipython.org,IPython,python.org
+internal,https://www.python.org/psf/membership/,Become a Member,python.org
+internal,https://www.python.org/psf/donations/,Donate to the PSF,python.org
+internal,https://www.python.org/dev/,Contributing,python.org
+internal,https://mail.python.org/mailman/listinfo/python-dev,python-dev list,python.org
+internal,https://www.python.org/dev/core-mentorship/,Core Mentorship,python.org
+internal,https://www.python.org/dev/security/,Report a Security Issue,python.org
+internal,https://status.python.org/,Status,python.org
+internal,https://www.python.org/psf-landing/,Python Software Foundation,python.org
+internal,https://www.python.org/about/legal/,Legal Statements,python.org
+internal,https://policies.python.org/python.org/Privacy-Notice/,Privacy Notice,python.org
+external,https://pypi.org/,PyPI,pypi.org
+external,https://psfmember.org/civicrm/contribute/transact?reset=1&id=2,Donate,psfmember.org
+external,javascript:;,Smaller,
+external,https://www.linkedin.com/company/python-software-foundation/,LinkedIn,linkedin.com
+external,https://fosstodon.org/@ThePSF,Mastodon,fosstodon.org
+external,https://twitter.com/ThePSF,Twitter,twitter.com
+external,http://brochure.getpython.info/,Python Brochure,getpython.info
+external,http://pyfound.blogspot.com/,PSF News,blogspot.com
+external,http://pycon.blogspot.com/,PyCon US News,blogspot.com
+external,https://pythoninsider.blogspot.com/2025/06/python-3140-beta-3-is-here.html,Python 3.14.0 beta 3 is here!,blogspot.com
+external,https://pyfound.blogspot.com/2025/06/the-psfs-2024-annual-impact-report-is.html,The PSF's 2024 Annual Impact Report is here!,blogspot.com
+external,https://pyfound.blogspot.com/2025/06/2025-psf-board-election-schedule.html,2025 PSF Board Election Schedule,blogspot.com
+external,https://pyfound.blogspot.com/2025/06/python-language-summit-2025.html,The Python Language Summit 2025,blogspot.com
+external,https://pyfound.blogspot.com/2025/06/python-language-summit-2025-uncontentious-talk-about-contention.html,The Python Language Summit 2025: An Uncontentious Talk about Contention,blogspot.com
+external,http://www.djangoproject.com/,Django,djangoproject.com
+external,http://www.pylonsproject.org/,Pyramid,pylonsproject.org
+external,http://bottlepy.org,Bottle,bottlepy.org
+external,http://tornadoweb.org,Tornado,tornadoweb.org
+external,http://flask.pocoo.org/,Flask,pocoo.org
+external,http://www.web2py.com/,web2py,web2py.com
+external,https://wiki.gnome.org/Projects/PyGObject,PyGObject,gnome.org
+external,http://www.riverbankcomputing.co.uk/software/pyqt/intro,PyQt,riverbankcomputing.co.uk
+external,https://wiki.qt.io/PySide,PySide,qt.io
+external,https://kivy.org/,Kivy,kivy.org
+external,https://dearpygui.readthedocs.io/en/latest/,DearPyGui,readthedocs.io
+external,http://www.scipy.org,SciPy,scipy.org
+external,http://pandas.pydata.org/,Pandas,pydata.org
+external,http://buildbot.net/,Buildbot,buildbot.net
+external,http://trac.edgewall.org/,Trac,edgewall.org
+external,http://roundup.sourceforge.net/,Roundup,sourceforge.net
+external,http://www.ansible.com,Ansible,ansible.com
+external,https://saltproject.io,Salt,saltproject.io
+external,https://www.openstack.org,OpenStack,openstack.org
+external,https://xon.sh,xonsh,xon.sh
+external,https://github.com/python/cpython/issues,Issue Tracker,github.com
+external,https://github.com/python/pythondotorg/issues,Submit Website Bug,github.com
