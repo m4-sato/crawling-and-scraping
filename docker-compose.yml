@@ -1,0 +1,20 @@
+services:
+  # このプロジェクトのクローラーサービス
+  crawler:
+    build: .
+    container_name: crawler_client
+    # crawl4aiサービスがhealthy状態になるまで待機する
+    env_file:
+      - .env
+    depends_on:
+      crawl4ai:
+        condition: service_healthy
+
+  # 依存するcrawl4aiサービス
+  crawl4ai:
+    # crawl4aiの公式イメージなどを指定
+    image: unclecode/crawl4ai:latest
+    container_name: crawl4ai
+    ports:
+      - "11235:11235"
+    # 必要に応じてボリュームや環境変数を設定
