@@ -1,7 +1,7 @@
 """
 intra_crawler.py
 社内イントラサイトの階層とファイル名一覧を CSV / text で保存するサンプル
-Python 3.10 以上 / crawl4ai 0.7.* / playwright
+Python 3.10 以上 / crawl4ai 0.7.* （Docker API モード）
 """
 import asyncio
 import csv
@@ -9,15 +9,21 @@ import os
 from pathlib import Path
 from urllib.parse import urlparse
 
-from crawl4ai import AsyncWebCrawler, CrawlerRunConfig
-from crawl4ai.content_scraping_strategy import LXMLWebScrapingStrategy
+from crawl4ai import (
+    BrowserConfig,
+    CrawlerRunConfig,
+    CacheMode,
+)
+# The explicit scraping strategy import is removed to rely on the library's default browser-based strategy.
 from crawl4ai.deep_crawling import BFSDeepCrawlStrategy
 from crawl4ai.deep_crawling.filters import FilterChain, ContentTypeFilter
+from crawl4ai.docker_client import Crawl4aiDockerClient  # ★ サーバー呼び出し用
 
 # ---------- 変更必須 ----------
-ROOT_URL = "https://intra.example.local"   # クロール開始 URL
-MAX_DEPTH = 3                              # 必要に応じて調整
-MAX_PAGES = 2000                           # 無制限は避ける
+ROOT_URL = os.getenv("ROOT_URL", "https://www.python.org/")
+MAX_DEPTH = int(os.getenv("MAX_DEPTH", "3"))
+MAX_PAGES = int(os.getenv("MAX_PAGES", "2000"))
+CRAWL4AI_BASE = os.getenv("CRAWL4AI_BASE_URL", "http://crawl4ai:11235")
 # --------------------------------
 
 OUTPUT_DIR = Path("crawl_results")
@@ -27,45 +33,54 @@ SITE_CSV = OUTPUT_DIR / "site_structure.csv"
 FILES_CSV = OUTPUT_DIR / "file_links.csv"
 TREE_TXT = OUTPUT_DIR / "site_tree.txt"
 
-# 拡張子で「ファイル」とみなす簡易判定
-FILE_EXTS = {".pdf", ".doc", ".docx", ".ppt", ".pptx", ".xls", ".xlsx",
-             ".csv", ".zip", ".rar", ".7z", ".txt"}
+FILE_EXTS = {
+    ".pdf", ".doc", ".docx", ".ppt", ".pptx",
+    ".xls", ".xlsx", ".csv", ".zip", ".rar", ".7z", ".txt"
+}
 
-def path_from_url(url: str, base_netloc: str) -> str:
-    """ベースドメイン部分を除いたパスを返す"""
-    parsed = urlparse(url)
-    # 別ドメインの場合はフル URL を返す（念のため）
-    if parsed.netloc != base_netloc:
-        return url
-    return parsed.path or "/"            # 例: '' -> '/' にする
+def strip_base(url: str, base_netloc: str) -> str:
+    p = urlparse(url)
+    return p.path or "/" if p.netloc == base_netloc else url
 
-async def crawl():
-    config = CrawlerRunConfig(
-        deep_crawl_strategy=BFSDeepCrawlStrategy(
-            max_depth=MAX_DEPTH,
-            include_external=False,
-            max_pages=MAX_PAGES
-        ),
-        scraping_strategy=LXMLWebScrapingStrategy(),
-        filter_chain=FilterChain([
-            ContentTypeFilter(allowed_types=["text/html"])
-        ]),
-        verbose=True              # ログを標準出力
+async def main() -> None:
+    # ---- フィルタチェーン（HTML のみ） ----
+    # filters = FilterChain([ContentTypeFilter(allowed_types=["text/html"])]) # DEBUG: Temporarily disabled
+
+    # ---- Deep‑crawl 戦略 ----
+    # DEBUG: Temporarily disabling deep crawl to isolate the 500 error.
+    # This will test if a single-page scrape works.
+    # deep_crawl = BFSDeepCrawlStrategy(
+    #     max_depth=MAX_DEPTH,
+    #     include_external=False,
+    #     max_pages=MAX_PAGES,
+    #     # filter_chain=filters,
+    # )
+
+    # The explicit scraping_strategy is removed. The default is a browser-based strategy (Playwright)
+    # which is what we need, and this avoids the ImportError.
+    crawl_cfg = CrawlerRunConfig(
+        # deep_crawl_strategy=deep_crawl, # DEBUG: Temporarily disabled
+        cache_mode=CacheMode.BYPASS,
+        verbose=True,
     )
 
-    site_rows = []   # URL / path 階層情報
-    file_rows = []   # ファイル名
-    tree_paths = []  # テキスト用
-
-    async with AsyncWebCrawler() as crawler:
-        results = await crawler.arun(ROOT_URL, config=config)
+    async with Crawl4aiDockerClient(base_url=CRAWL4AI_BASE, verbose=True) as client:
+        # BrowserConfig is still needed because the default strategy uses a browser.
+        results = await client.crawl(
+            [ROOT_URL],
+            browser_config=BrowserConfig(headless=True),
+            crawler_config=crawl_cfg,
+        )
 
     base_netloc = urlparse(ROOT_URL).netloc
+    site_rows, file_rows, tree = [], [], []
 
     for res in results:
+        # The depth will not be present without deep crawling, so we default to 0.
         depth = res.metadata.get("depth", 0)
-        path = path_from_url(res.url, base_netloc)
+        path = strip_base(res.url, base_netloc)
         is_file = os.path.splitext(path)[1].lower() in FILE_EXTS
+
         site_rows.append({
             "url": res.url,
             "path": path,
@@ -73,13 +88,11 @@ async def crawl():
             "type": "file" if is_file else "page",
             "status_code": res.status_code,
             "success": res.success,
-            "error": res.error_message or ""
+            "error": res.error_message or "",
         })
-        tree_paths.append((depth, path))
+        tree.append((depth, path))
 
-        # ページ内リンクからファイル名を抽出
-        links = res.links.get("internal", [])
-        for link in links:
+        for link in res.links.get("internal", []):
             href = link.get("href", "")
             if not href:
                 continue
@@ -88,26 +101,24 @@ async def crawl():
                 file_rows.append({
                     "page_url": res.url,
                     "file_name": fname,
-                    "file_url": href
+                    "file_url": href,
                 })
 
     # ---------- CSV 出力 ----------
-    with SITE_CSV.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=site_rows[0].keys())
-        writer.writeheader()
-        writer.writerows(site_rows)
+    if site_rows:
+        with SITE_CSV.open("w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=site_rows[0].keys())
+            w.writeheader(); w.writerows(site_rows)
 
     if file_rows:
         with FILES_CSV.open("w", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=file_rows[0].keys())
-            writer.writeheader()
-            writer.writerows(file_rows)
+            w = csv.DictWriter(f, fieldnames=file_rows[0].keys())
+            w.writeheader(); w.writerows(file_rows)
 
-    # ---------- ツリー (簡易) ----------
+    # ---------- ツリー ----------
     with TREE_TXT.open("w", encoding="utf-8") as f:
-        for depth, path in sorted(tree_paths, key=lambda x: x[0]):
-            indent = "    " * depth
-            f.write(f"{indent}{os.path.basename(path) or '/'}\n")
+        for d, p in sorted(tree, key=lambda x: x[0]):
+            f.write(f"{'    '*d}{os.path.basename(p) or '/'}\n")
 
     print(f"✓ サイト構造: {SITE_CSV}")
     if file_rows:
@@ -115,4 +126,4 @@ async def crawl():
     print(f"✓ ツリー表示: {TREE_TXT}")
 
 if __name__ == "__main__":
-    asyncio.run(crawl())
+    asyncio.run(main())
