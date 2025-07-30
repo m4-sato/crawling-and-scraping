@@ -1,50 +1,50 @@
 /
     docs.python.org
     devguide.python.org
-    peps.python.org
-    PythonBooks
-    Languages
-    BeginnersGuide
-    moin
     /
-    license.html
+    peps.python.org
+    Languages
+    moin
+    PythonBooks
+    BeginnersGuide
     faq
     3
-    signup
-    login
-    awards
-    sigs
-    irc
-    quotes
-    gettingstarted
-    lists
-    help
-    logos
-    about
-    doc
+    license.html
     forums
-    workshops
-    av
-    diversity
-    apps
     community
-    other
+    diversity
+    awards
+    login
+    help
+    signup
+    gettingstarted
+    apps
+    quotes
+    about
+    irc
+    workshops
     alternatives
+    sigs
+    lists
+    logos
+    av
     versions
+    doc
     essays
-    macos
-    downloads
     operating-systems
     source
-    arts
-    get-involved
-    community-stories
+    macos
+    success-stories
+    engineering
     conduct
     2024
-    windows
-    business
-    success-stories
-    jobs
-    psf
+    other
+    community-stories
+    get-involved
     education
-    engineering
+    arts
+    jobs
+    business
+    downloads
+    windows
+    psf

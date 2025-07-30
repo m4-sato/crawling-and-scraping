@@ -1,0 +1,58 @@
+/
+├── https:
+│   ├── docs.python.org
+│   │   ├── faq
+│   │   └── 3
+│   │       └── license.html
+│   ├── devguide.python.org
+│   ├── peps.python.org
+│   └── wiki.python.org
+│       └── moin
+│           ├── PythonBooks
+│           └── BeginnersGuide
+├── http:
+│   └── wiki.python.org
+│       └── moin
+│           └── Languages
+├── community
+│   ├── forums
+│   ├── diversity
+│   ├── awards
+│   ├── irc
+│   ├── workshops
+│   ├── sigs
+│   ├── lists
+│   └── logos
+├── accounts
+│   ├── login
+│   └── signup
+├── about
+│   ├── help
+│   ├── gettingstarted
+│   ├── apps
+│   └── quotes
+├── download
+│   ├── alternatives
+│   └── other
+├── doc
+│   ├── av
+│   ├── versions
+│   └── essays
+├── downloads
+│   ├── operating-systems
+│   ├── source
+│   ├── macos
+│   └── windows
+├── success-stories
+│   └── category
+│       ├── engineering
+│       ├── education
+│       ├── arts
+│       └── business
+├── psf
+│   ├── conduct
+│   ├── annual-report
+│   │   └── 2024
+│   ├── community-stories
+│   └── get-involved
+└── jobs
