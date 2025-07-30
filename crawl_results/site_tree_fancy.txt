@@ -1,58 +1,2958 @@
 /
-├── https:
-│   ├── docs.python.org
-│   │   ├── faq
-│   │   └── 3
-│   │       └── license.html
-│   ├── devguide.python.org
-│   ├── peps.python.org
-│   └── wiki.python.org
-│       └── moin
-│           ├── PythonBooks
-│           └── BeginnersGuide
 ├── http:
-│   └── wiki.python.org
-│       └── moin
-│           └── Languages
-├── community
-│   ├── forums
-│   ├── diversity
-│   ├── awards
-│   ├── irc
-│   ├── workshops
-│   ├── sigs
-│   ├── lists
-│   └── logos
+│   ├── docs.python.org
+│   │   ├── 3
+│   │   │   ├── tutorial
+│   │   │   │   └── introduction.html
+│   │   │   ├── download.html
+│   │   │   ├── reference
+│   │   │   ├── faq
+│   │   │   └── library
+│   │   ├── lib
+│   │   ├── 2
+│   │   │   └── library
+│   │   │       └── imaplib.html
+│   │   ├── library
+│   │   │   ├── ftplib.html
+│   │   │   ├── internet
+│   │   │   ├── email
+│   │   │   ├── json.html
+│   │   │   └── markup
+│   │   ├── howto
+│   │   │   └── sockets.html
+│   │   ├── devguide
+│   │   ├── ref
+│   │   ├── release
+│   │   │   ├── 3.8.16
+│   │   │   │   └── whatsnew
+│   │   │   │       └── changelog.html
+│   │   │   ├── 3.8.15
+│   │   │   │   └── whatsnew
+│   │   │   │       └── changelog.html
+│   │   │   ├── 3.8.14
+│   │   │   │   └── whatsnew
+│   │   │   │       └── changelog.html
+│   │   │   ├── 3.9.16
+│   │   │   │   └── whatsnew
+│   │   │   │       └── changelog.html
+│   │   │   ├── 3.8.17
+│   │   │   │   └── whatsnew
+│   │   │   │       └── changelog.html
+│   │   │   ├── 3.9.15
+│   │   │   │   └── whatsnew
+│   │   │   │       └── changelog.html
+│   │   │   └── 3.9.14
+│   │   │       └── whatsnew
+│   │   │           └── changelog.html
+│   │   └── tut
+│   ├── ipython.org
+│   ├── wiki.python.org
+│   │   └── moin
+│   │       ├── Languages
+│   │       ├── TkInter
+│   │       ├── BeginnersGuide
+│   │       │   ├── Download
+│   │       │   ├── Programmers
+│   │       │   ├── Examples
+│   │       │   └── NonProgrammers
+│   │       ├── IntegratedDevelopmentEnvironments
+│   │       ├── LocalUserGroups
+│   │       ├── NumericAndScientific
+│   │       ├── IntroductoryBooks
+│   │       ├── PythonEditors
+│   │       └── WebProgramming
+│   ├── planetpython.org
+│   ├── www.wxpython.org
+│   ├── advocacy.python.org
+│   │   └── podcasts
+│   ├── blog-de.python.org
+│   ├── blog-fr.python.org
+│   ├── blog-es.python.org
+│   ├── blog-cn.python.org
+│   ├── blog-ko.python.org
+│   ├── blog-ja.python.org
+│   ├── blog-pt.python.org
+│   ├── blog-ro.python.org
+│   ├── blog-tw.python.org
+│   ├── blog-ru.python.org
+│   ├── blog.python.org
+│   ├── buildbot.wxpython.org
+│   ├── bugs.python.org
+│   ├── docs.wxpython.org
+│   ├── hg.python.org
+│   │   └── cpython
+│   │       └── raw-file
+│   │           ├── v2.1.3
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── 15fc83c505e3
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.0.1
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.2.1
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.2.3
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.3.2
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.2
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.3.1
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.3.3
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.2.2
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.3.4
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.3.5
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.4.1
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.4.2
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.3.6
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.3.7
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.4.3
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.5.1
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.5.6
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.5.4
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.5.5
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.5.3
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.4
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.5.2
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.4.6
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.4.4
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.4.5
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.6.6
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.5
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.6.8
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.6.9
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.6.7
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.6.5
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.6.4
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.6.1
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.6.3
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.6.2
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.7.1
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.6
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.7.2
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.7.3
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.7.5
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.7.4
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.7.6
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.7
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.7.7
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v2.7.8
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v3.0
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v3.0.1
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v3.1.1
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v3.2.5
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v3.1.4
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v3.2.4
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v3.2.3
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v3.1.2
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v3.2.2
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v3.1.3
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v3.2.1
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v3.2
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v3.3.0
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           ├── v3.1.5
+│   │           │   └── Misc
+│   │           │       └── NEWS
+│   │           └── v3.1
+│   │               └── Misc
+│   │                   └── NEWS
+│   ├── legacy.python.org
+│   │   ├── workshops
+│   │   │   └── 2002-02
+│   │   ├── doc
+│   │   │   └── essays
+│   │   │       └── ppt
+│   │   └── dev
+│   │       └── peps
+│   ├── mail.python.org
+│   │   ├── mailman
+│   │   │   └── listinfo
+│   │   │       ├── capi-sig
+│   │   │       ├── image-sig
+│   │   │       ├── email-sig
+│   │   │       ├── i18n-sig
+│   │   │       ├── doc-sig
+│   │   │       ├── cplusplus-sig
+│   │   │       ├── db-sig
+│   │   │       ├── datetime-sig
+│   │   │       ├── distutils-sig
+│   │   │       ├── meta-sig
+│   │   │       ├── import-sig
+│   │   │       ├── edu-sig
+│   │   │       ├── python-checkins
+│   │   │       ├── python-announce-list
+│   │   │       ├── python-dev
+│   │   │       ├── stdlib-sig
+│   │   │       ├── web-sig
+│   │   │       ├── pythonmac-sig
+│   │   │       ├── xml-sig
+│   │   │       └── python-list
+│   │   └── pipermail
+│   │       ├── capi-sig
+│   │       ├── cplusplus-sig
+│   │       ├── doc-sig
+│   │       ├── datetime-sig
+│   │       ├── email-sig
+│   │       ├── edu-sig
+│   │       ├── i18n-sig
+│   │       ├── distutils-sig
+│   │       ├── db-sig
+│   │       ├── import-sig
+│   │       ├── mobile-sig
+│   │       ├── python-announce-list
+│   │       ├── stdlib-sig
+│   │       ├── image-sig
+│   │       ├── pythonmac-sig
+│   │       ├── meta-sig
+│   │       ├── python-list
+│   │       ├── tutor
+│   │       ├── web-sig
+│   │       └── xml-sig
+│   ├── nbviewer.ipython.org
+│   │   └── github
+│   │       └── ptwobrussell
+│   │           └── Mining-the-Social-Web-2nd-Edition
+│   │               └── tree
+│   │                   └── master
+│   │                       └── ipynb
+│   ├── packaging.python.org
+│   └── pypi.python.org
+│       ├── pypi
+│       │   └── pytkgen
+│       └── pypi?%3Aaction=index
+├── https:
+│   ├── devguide.python.org
+│   │   ├── contrib
+│   │   │   ├── code
+│   │   │   │   ├── development-tools
+│   │   │   │   ├── developer-workflow
+│   │   │   │   ├── git
+│   │   │   │   ├── setup
+│   │   │   │   ├── pull-request-lifecycle
+│   │   │   │   └── testing
+│   │   │   ├── contrib-plan
+│   │   │   ├── core-team
+│   │   │   │   ├── experts
+│   │   │   │   ├── committing
+│   │   │   │   ├── team-log
+│   │   │   │   ├── motivations
+│   │   │   │   ├── join-team
+│   │   │   │   └── responsibilities
+│   │   │   ├── doc
+│   │   │   │   ├── devguide
+│   │   │   │   ├── markup
+│   │   │   │   ├── pull-request-lifecycle
+│   │   │   │   ├── help-documenting
+│   │   │   │   ├── translating
+│   │   │   │   ├── start-documenting
+│   │   │   │   └── style-guide
+│   │   │   ├── intro
+│   │   │   ├── project
+│   │   │   │   ├── conduct
+│   │   │   │   ├── channels
+│   │   │   │   ├── github
+│   │   │   │   ├── directory-structure
+│   │   │   │   ├── generative-ai
+│   │   │   │   ├── governance
+│   │   │   │   ├── outreach
+│   │   │   │   └── roles
+│   │   │   ├── security
+│   │   │   ├── triage
+│   │   │   │   ├── issue-tracker
+│   │   │   │   ├── reviewing
+│   │   │   │   ├── triage-team
+│   │   │   │   ├── labels
+│   │   │   │   └── triaging
+│   │   │   ├── workflows
+│   │   │   │   ├── troubleshooting
+│   │   │   │   ├── regenerate
+│   │   │   │   ├── codespaces
+│   │   │   │   ├── compile
+│   │   │   │   ├── get-source
+│   │   │   │   ├── install-dependencies
+│   │   │   │   └── install-git
+│   │   │   └── user-success
+│   │   ├── core-team
+│   │   │   ├── responsibilities
+│   │   │   ├── join-team
+│   │   │   ├── committing
+│   │   │   ├── team-log
+│   │   │   ├── motivations
+│   │   │   ├── experts
+│   │   │   └── memorialization
+│   │   ├── developer-workflow
+│   │   │   ├── extension-modules
+│   │   │   ├── c-api
+│   │   │   ├── porting
+│   │   │   ├── grammar
+│   │   │   ├── sbom
+│   │   │   ├── communication-channels
+│   │   │   ├── lang-changes
+│   │   │   ├── development-cycle
+│   │   │   ├── psrt
+│   │   │   └── stdlib
+│   │   ├── developers
+│   │   ├── development-tools
+│   │   │   ├── clinic
+│   │   │   ├── gdb
+│   │   │   ├── clang
+│   │   │   └── warnings
+│   │   ├── documentation
+│   │   │   ├── translations
+│   │   │   │   ├── translating
+│   │   │   │   └── coordinating
+│   │   │   ├── start-documenting
+│   │   │   ├── style-guide
+│   │   │   ├── devguide
+│   │   │   ├── help-documenting
+│   │   │   └── markup
+│   │   ├── getting-started
+│   │   │   ├── getting-help
+│   │   │   ├── fixing-issues
+│   │   │   ├── generative-ai
+│   │   │   ├── git-boot-camp
+│   │   │   ├── setup-building
+│   │   │   └── pull-request-lifecycle
+│   │   ├── docquality.html
+│   │   ├── internals
+│   │   │   ├── compiler
+│   │   │   ├── interpreter
+│   │   │   ├── parser
+│   │   │   ├── garbage-collector
+│   │   │   └── exploring
+│   │   ├── testing
+│   │   │   ├── silence-warnings
+│   │   │   ├── run-write-tests
+│   │   │   ├── coverage
+│   │   │   ├── buildbots
+│   │   │   └── new-buildbot-worker
+│   │   ├── triage
+│   │   │   ├── github-bpo-faq
+│   │   │   ├── labels
+│   │   │   ├── issue-tracker
+│   │   │   ├── triage-team
+│   │   │   └── triaging
+│   │   ├── search
+│   │   └── versions
+│   ├── blog.python.org
+│   │   ├── 2011
+│   │   │   ├── 04
+│   │   │   ├── 05
+│   │   │   ├── 03
+│   │   │   ├── 06
+│   │   │   ├── 08
+│   │   │   └── 07
+│   │   ├── 2012
+│   │   │   ├── 08
+│   │   │   ├── 06
+│   │   │   ├── 05
+│   │   │   ├── 03
+│   │   │   ├── 10
+│   │   │   ├── 12
+│   │   │   └── 11
+│   │   ├── 2013
+│   │   │   ├── 02
+│   │   │   ├── 03
+│   │   │   ├── 10
+│   │   │   └── 11
+│   │   ├── 2014
+│   │   │   ├── 03
+│   │   │   ├── 02
+│   │   │   ├── 05
+│   │   │   ├── 11
+│   │   │   └── 12
+│   │   ├── 2015
+│   │   │   ├── 01
+│   │   │   ├── 05
+│   │   │   ├── 03
+│   │   │   ├── 07
+│   │   │   ├── 06
+│   │   │   ├── 08
+│   │   │   ├── 11
+│   │   │   ├── 09
+│   │   │   └── 12
+│   │   ├── 2016
+│   │   │   ├── 08
+│   │   │   ├── 05
+│   │   │   ├── 06
+│   │   │   ├── 09
+│   │   │   ├── 07
+│   │   │   ├── 12
+│   │   │   ├── 11
+│   │   │   └── 10
+│   │   ├── 2017
+│   │   │   ├── 01
+│   │   │   ├── 07
+│   │   │   ├── 09
+│   │   │   ├── 08
+│   │   │   ├── 03
+│   │   │   ├── 06
+│   │   │   ├── 10
+│   │   │   └── 12
+│   │   ├── 2018
+│   │   │   ├── 02
+│   │   │   ├── 04
+│   │   │   ├── 03
+│   │   │   ├── 01
+│   │   │   ├── 05
+│   │   │   ├── 06
+│   │   │   ├── 10
+│   │   │   ├── 09
+│   │   │   ├── 08
+│   │   │   └── 12
+│   │   ├── 2019
+│   │   │   ├── 02
+│   │   │   ├── 07
+│   │   │   ├── 06
+│   │   │   ├── 05
+│   │   │   ├── 03
+│   │   │   ├── 08
+│   │   │   ├── 09
+│   │   │   ├── 11
+│   │   │   ├── 12
+│   │   │   └── 10
+│   │   ├── 2020
+│   │   │   ├── 02
+│   │   │   ├── 01
+│   │   │   ├── 04
+│   │   │   ├── 03
+│   │   │   ├── 06
+│   │   │   ├── 07
+│   │   │   ├── 05
+│   │   │   ├── 08
+│   │   │   ├── 10
+│   │   │   ├── 12
+│   │   │   ├── 11
+│   │   │   └── 09
+│   │   ├── 2021
+│   │   │   ├── 02
+│   │   │   ├── 01
+│   │   │   ├── 04
+│   │   │   ├── 03
+│   │   │   ├── 05
+│   │   │   ├── 06
+│   │   │   ├── 07
+│   │   │   ├── 08
+│   │   │   ├── 09
+│   │   │   ├── 10
+│   │   │   ├── 11
+│   │   │   └── 12
+│   │   ├── 2022
+│   │   │   ├── 02
+│   │   │   ├── 01
+│   │   │   ├── 09
+│   │   │   ├── 03
+│   │   │   ├── 06
+│   │   │   ├── 04
+│   │   │   ├── 07
+│   │   │   ├── 08
+│   │   │   ├── 05
+│   │   │   ├── 12
+│   │   │   ├── 11
+│   │   │   └── 10
+│   │   ├── 2023
+│   │   │   ├── 02
+│   │   │   ├── 01
+│   │   │   ├── 07
+│   │   │   ├── 08
+│   │   │   ├── 05
+│   │   │   ├── 06
+│   │   │   ├── 03
+│   │   │   ├── 04
+│   │   │   ├── 12
+│   │   │   ├── 11
+│   │   │   ├── 09
+│   │   │   └── 10
+│   │   ├── 2024
+│   │   │   ├── 02
+│   │   │   ├── 04
+│   │   │   ├── 01
+│   │   │   ├── 05
+│   │   │   ├── 03
+│   │   │   ├── 07
+│   │   │   ├── 06
+│   │   │   ├── 09
+│   │   │   ├── 08
+│   │   │   ├── 10
+│   │   │   ├── 11
+│   │   │   └── 12
+│   │   ├── 2025
+│   │   │   ├── 02
+│   │   │   ├── 01
+│   │   │   ├── 03
+│   │   │   ├── 04
+│   │   │   ├── 05
+│   │   │   │   ├── python-3140-beta-2-is-here.html
+│   │   │   │   └── python-3140-beta-1-is-here.html
+│   │   │   ├── 06
+│   │   │   │   ├── python-3135-is-now-available.html
+│   │   │   │   ├── python-3134-31211-31113-31018-and-3923.html
+│   │   │   │   └── python-3140-beta-3-is-here.html
+│   │   │   └── 07
+│   │   │       ├── python-314-release-candidate-1-is-go.html
+│   │   │       └── python-3140-beta-4-is-here.html
+│   │   ├── feeds
+│   │   │   └── posts
+│   │   │       ├── default?alt=rss
+│   │   │       └── default
+│   │   ├── search
+│   │   │   └── label
+│   │   │       └── releases
+│   │   └── search?max-results=7&updated-max=2025-05-07T13%3A34%3A00-04%3A00
+│   ├── peps.python.org
+│   │   ├── pep-0741
+│   │   ├── pep-0628
+│   │   ├── pep-0740
+│   │   ├── pep-0672
+│   │   ├── pep-0676
+│   │   ├── pep-0760
+│   │   ├── pep-3114
+│   │   ├── pep-0006
+│   │   ├── pep-0755
+│   │   ├── pep-0754
+│   │   ├── pep-3333
+│   │   ├── pep-8014
+│   │   ├── pep-0231
+│   │   ├── pep-8015
+│   │   ├── pep-3154
+│   │   ├── pep-0779
+│   │   ├── pep-0753
+│   │   ├── pep-0768
+│   │   ├── pep-0780
+│   │   ├── pep-0761
+│   │   ├── pep-0762
+│   │   ├── pep-0769
+│   │   ├── pep-8016
+│   │   ├── pep-8100
+│   │   ├── pep-0677
+│   │   ├── pep-8101
+│   │   ├── pep-0007
+│   │   ├── pep-0008
+│   │   ├── pep-0719
+│   │   ├── pep-0770
+│   │   ├── pep-0745
+│   │   ├── pep-0798
+│   │   ├── pep-3099
+│   │   ├── pep-0790
+│   │   ├── pep-0688
+│   │   ├── pep-3151
+│   │   ├── pep-8102
+│   │   ├── topic
+│   │   │   ├── packaging
+│   │   │   ├── release
+│   │   │   ├── typing
+│   │   │   └── governance
+│   │   ├── pep-0680
+│   │   ├── pep-0759
+│   │   ├── pep-0787
+│   │   ├── pep-0788
+│   │   ├── pep-3111
+│   │   ├── pep-0766
+│   │   ├── pep-0476
+│   │   ├── pep-3140
+│   │   ├── pep-0793
+│   │   ├── pep-3141
+│   │   ├── pep-0637
+│   │   ├── pep-0623
+│   │   ├── pep-0634
+│   │   ├── pep-3118
+│   │   ├── pep-0695
+│   │   ├── pep-8012
+│   │   ├── pep-3120
+│   │   ├── pep-8013
+│   │   ├── pep-2026
+│   │   ├── pep-0642
+│   │   ├── pep-0536
+│   │   ├── pep-0781
+│   │   ├── pep-0782
+│   │   ├── pep-3121
+│   │   ├── pep-0684
+│   │   ├── pep-3126
+│   │   ├── pep-0692
+│   │   ├── pep-0783
+│   │   ├── pep-8000
+│   │   ├── pep-0800
+│   │   ├── pep-0801
+│   │   ├── pep-3105
+│   │   ├── pep-3115
+│   │   ├── pep-3143
+│   │   ├── pep-0538
+│   │   ├── pep-0764
+│   │   ├── pep-3117
+│   │   ├── pep-0510
+│   │   ├── pep-0474
+│   │   ├── pep-0784
+│   │   ├── pep-3155
+│   │   ├── pep-8001
+│   │   ├── pep-3152
+│   │   ├── pep-3156
+│   │   ├── pep-3138
+│   │   ├── pep-8103
+│   │   ├── pep-8104
+│   │   ├── pep-3001
+│   │   ├── pep-0513
+│   │   ├── pep-0687
+│   │   ├── pep-0682
+│   │   ├── pep-0512
+│   │   ├── pep-0660
+│   │   ├── pep-0531
+│   │   ├── pep-0534
+│   │   ├── pep-0567
+│   │   ├── pep-0535
+│   │   ├── pep-0657
+│   │   ├── pep-0681
+│   │   ├── pep-0666
+│   │   ├── pep-0669
+│   │   ├── pep-0668
+│   │   ├── pep-0671
+│   │   ├── pep-0667
+│   │   ├── pep-0543
+│   │   ├── pep-0544
+│   │   ├── pep-0549
+│   │   ├── pep-0545
+│   │   ├── pep-0626
+│   │   ├── pep-0673
+│   │   ├── pep-0607
+│   │   ├── pep-0698
+│   │   ├── pep-0694
+│   │   ├── pep-0679
+│   │   ├── pep-0645
+│   │   ├── pep-0629
+│   │   ├── pep-0603
+│   │   ├── pep-0685
+│   │   ├── pep-0556
+│   │   ├── pep-0532
+│   │   ├── pep-0693
+│   │   ├── pep-0546
+│   │   ├── pep-0596
+│   │   ├── pep-0555
+│   │   ├── pep-0561
+│   │   ├── pep-0610
+│   │   ├── pep-0483
+│   │   ├── pep-0482
+│   │   ├── pep-0622
+│   │   ├── pep-0655
+│   │   ├── pep-0661
+│   │   ├── pep-0217
+│   │   ├── pep-0690
+│   │   ├── pep-0428
+│   │   ├── pep-0618
+│   │   ├── pep-0004
+│   │   ├── pep-0223
+│   │   ├── api
+│   │   ├── pep-0009
+│   │   ├── pep-0003
+│   │   ├── pep-0010
+│   │   ├── pep-0001
+│   │   ├── pep-0002
+│   │   ├── pep-0005
+│   │   ├── pep-0220
+│   │   ├── pep-0011
+│   │   ├── pep-0261
+│   │   ├── pep-0222
+│   │   ├── pep-0221
+│   │   ├── pep-0226
+│   │   ├── pep-0337
+│   │   ├── pep-0225
+│   │   ├── pep-0102
+│   │   ├── pep-0227
+│   │   ├── pep-0566
+│   │   ├── pep-0268
+│   │   ├── pep-0013
+│   │   ├── pep-0012
+│   │   ├── pep-0211
+│   │   ├── pep-0439
+│   │   ├── pep-0208
+│   │   ├── pep-0160
+│   │   ├── pep-0103
+│   │   ├── pep-0237
+│   │   ├── pep-0251
+│   │   ├── pep-0266
+│   │   ├── pep-0209
+│   │   ├── pep-0238
+│   │   ├── pep-0309
+│   │   ├── pep-0465
+│   │   ├── pep-0360
+│   │   ├── pep-0241
+│   │   ├── pep-0243
+│   │   ├── pep-0564
+│   │   ├── pep-0562
+│   │   ├── pep-0315
+│   │   ├── pep-0247
+│   │   ├── pep-0502
+│   │   ├── pep-0361
+│   │   ├── pep-0042
+│   │   ├── pep-0224
+│   │   ├── pep-0101
+│   │   ├── pep-0371
+│   │   ├── pep-0630
+│   │   ├── pep-0552
+│   │   ├── pep-0640
+│   │   ├── pep-0659
+│   │   ├── numerical
+│   │   ├── pep-0643
+│   │   ├── pep-0553
+│   │   ├── pep-0554
+│   │   ├── pep-0641
+│   │   ├── pep-0558
+│   │   ├── pep-0654
+│   │   ├── pep-0664
+│   │   ├── pep-0644
+│   │   ├── pep-0551
+│   │   ├── pep-0400
+│   │   ├── pep-0491
+│   │   ├── pep-0282
+│   │   ├── pep-0298
+│   │   ├── pep-0653
+│   │   ├── pep-0406
+│   │   ├── pep-0658
+│   │   ├── pep-0656
+│   │   ├── pep-0403
+│   │   ├── pep-0507
+│   │   ├── pep-0506
+│   │   ├── pep-0396
+│   │   ├── pep-0505
+│   │   ├── pep-0390
+│   │   ├── pep-0409
+│   │   ├── pep-0405
+│   │   ├── pep-0294
+│   │   ├── pep-0291
+│   │   ├── pep-0539
+│   │   ├── pep-0392
+│   │   ├── pep-0364
+│   │   ├── pep-0492
+│   │   ├── pep-0402
+│   │   ├── pep-0489
+│   │   ├── pep-0498
+│   │   ├── pep-0404
+│   │   ├── pep-0542
+│   │   ├── pep-0395
+│   │   ├── pep-0550
+│   │   ├── pep-0368
+│   │   ├── pep-0488
+│   │   ├── pep-0305
+│   │   ├── pep-0281
+│   │   ├── pep-0570
+│   │   ├── pep-0284
+│   │   ├── pep-0398
+│   │   ├── pep-0020
+│   │   ├── pep-0401
+│   │   ├── pep-0297
+│   │   ├── pep-0292
+│   │   ├── pep-0399
+│   │   ├── pep-0293
+│   │   ├── pep-0412
+│   │   ├── pep-0704
+│   │   ├── pep-0410
+│   │   ├── pep-0296
+│   │   ├── pep-0278
+│   │   ├── pep-0235
+│   │   ├── pep-0436
+│   │   ├── pep-0314
+│   │   ├── pep-0525
+│   │   ├── pep-0705
+│   │   ├── pep-0527
+│   │   ├── pep-0526
+│   │   ├── pep-0706
+│   │   ├── pep-0771
+│   │   ├── pep-0528
+│   │   ├── pep-0743
+│   │   ├── pep-0537
+│   │   ├── pep-0663
+│   │   ├── pep-0385
+│   │   ├── pep-0707
+│   │   ├── pep-0708
+│   │   ├── pep-0730
+│   │   ├── pep-0709
+│   │   ├── pep-0599
+│   │   ├── pep-0541
+│   │   ├── pep-0710
+│   │   ├── pep-0289
+│   │   ├── pep-0600
+│   │   ├── pep-0565
+│   │   ├── pep-0691
+│   │   ├── pep-0590
+│   │   ├── pep-0589
+│   │   ├── pep-0569
+│   │   ├── pep-0571
+│   │   ├── pep-0464
+│   │   ├── pep-0452
+│   │   ├── pep-0455
+│   │   ├── pep-0467
+│   │   ├── pep-0386
+│   │   ├── pep-0471
+│   │   ├── pep-0457
+│   │   ├── pep-0407
+│   │   ├── pep-0456
+│   │   ├── pep-0416
+│   │   ├── pep-0374
+│   │   ├── pep-0466
+│   │   ├── pep-0441
+│   │   ├── pep-0384
+│   │   ├── pep-0391
+│   │   ├── pep-0473
+│   │   ├── pep-0380
+│   │   ├── pep-0387
+│   │   ├── pep-0496
+│   │   ├── pep-0389
+│   │   ├── pep-0472
+│   │   ├── pep-0415
+│   │   ├── pep-0454
+│   │   ├── pep-0449
+│   │   ├── pep-0429
+│   │   ├── pep-0330
+│   │   ├── pep-0326
+│   │   ├── pep-0649
+│   │   ├── pep-0202
+│   │   ├── pep-0440
+│   │   ├── pep-0204
+│   │   ├── pep-0529
+│   │   ├── pep-0438
+│   │   ├── pep-0703
+│   │   ├── pep-0203
+│   │   ├── pep-0601
+│   │   ├── pep-0200
+│   │   ├── pep-0711
+│   │   ├── pep-0100
+│   │   ├── pep-0201
+│   │   ├── pep-0341
+│   │   ├── pep-0349
+│   │   ├── pep-0342
+│   │   ├── pep-0306
+│   │   ├── pep-0331
+│   │   ├── pep-0343
+│   │   ├── pep-3123
+│   │   ├── pep-0420
+│   │   ├── pep-0362
+│   │   ├── pep-3124
+│   │   ├── pep-3119
+│   │   ├── pep-0358
+│   │   ├── pep-0702
+│   │   ├── pep-0458
+│   │   ├── pep-3132
+│   │   ├── pep-0518
+│   │   ├── pep-0785
+│   │   ├── pep-0365
+│   │   ├── pep-0363
+│   │   ├── pep-0394
+│   │   ├── pep-3127
+│   │   ├── pep-0789
+│   │   ├── pep-3142
+│   │   ├── pep-0499
+│   │   ├── pep-0408
+│   │   ├── pep-3130
+│   │   ├── pep-3100
+│   │   ├── pep-0219
+│   │   ├── pep-0497
+│   │   ├── pep-0635
+│   │   ├── pep-0773
+│   │   ├── pep-3108
+│   │   ├── pep-3003
+│   │   ├── pep-0503
+│   │   ├── pep-0772
+│   │   ├── pep-0233
+│   │   ├── pep-0767
+│   │   ├── pep-0504
+│   │   ├── pep-3110
+│   │   ├── pep-0234
+│   │   ├── pep-0245
+│   │   ├── pep-0453
+│   │   ├── pep-0432
+│   │   ├── pep-0484
+│   │   ├── pep-0246
+│   │   ├── pep-0435
+│   │   ├── pep-0799
+│   │   ├── pep-0495
+│   │   ├── pep-0236
+│   │   ├── pep-0794
+│   │   ├── pep-0485
+│   │   ├── pep-0260
+│   │   ├── pep-3102
+│   │   ├── pep-3103
+│   │   ├── pep-3002
+│   │   ├── pep-0254
+│   │   ├── pep-0258
+│   │   ├── pep-0255
+│   │   ├── pep-0460
+│   │   ├── pep-0481
+│   │   ├── pep-0480
+│   │   ├── pep-0478
+│   │   ├── pep-0259
+│   │   ├── pep-0509
+│   │   ├── pep-0508
+│   │   ├── pep-0650
+│   │   ├── pep-0250
+│   │   ├── pep-0715
+│   │   ├── pep-0651
+│   │   ├── pep-0511
+│   │   ├── pep-3129
+│   │   ├── pep-0652
+│   │   ├── pep-0239
+│   │   ├── pep-0248
+│   │   ├── pep-0547
+│   │   ├── pep-3128
+│   │   ├── pep-0253
+│   │   ├── pep-0256
+│   │   ├── pep-0557
+│   │   ├── pep-0257
+│   │   ├── pep-0249
+│   │   ├── pep-0633
+│   │   ├── pep-0307
+│   │   ├── pep-0252
+│   │   ├── pep-0322
+│   │   ├── pep-0323
+│   │   ├── pep-0324
+│   │   ├── pep-0665
+│   │   ├── pep-0304
+│   │   ├── pep-0353
+│   │   ├── pep-0670
+│   │   ├── pep-0303
+│   │   ├── pep-0700
+│   │   ├── pep-0332
+│   │   ├── pep-0295
+│   │   ├── pep-0299
+│   │   ├── pep-0347
+│   │   ├── pep-0752
+│   │   ├── pep-0288
+│   │   ├── pep-0477
+│   │   ├── pep-0285
+│   │   ├── pep-0302
+│   │   ├── pep-0516
+│   │   ├── pep-0468
+│   │   ├── pep-0301
+│   │   ├── pep-0494
+│   │   ├── pep-0463
+│   │   ├── pep-0356
+│   │   ├── pep-0620
+│   │   ├── pep-0462
+│   │   ├── pep-0720
+│   │   ├── pep-0280
+│   │   ├── pep-0214
+│   │   ├── pep-0229
+│   │   ├── pep-0230
+│   │   ├── pep-0271
+│   │   ├── pep-0232
+│   │   ├── pep-0240
+│   │   ├── pep-0316
+│   │   ├── pep-0275
+│   │   ├── pep-0244
+│   │   ├── pep-0264
+│   │   ├── pep-0572
+│   │   ├── pep-3122
+│   │   ├── pep-0205
+│   │   ├── pep-0213
+│   │   ├── pep-0548
+│   │   ├── pep-0325
+│   │   ├── pep-0263
+│   │   ├── pep-0327
+│   │   ├── pep-0328
+│   │   ├── pep-0242
+│   │   ├── pep-0274
+│   │   ├── pep-0276
+│   │   ├── pep-0277
+│   │   ├── pep-0321
+│   │   ├── pep-0393
+│   │   ├── pep-0319
+│   │   ├── pep-0317
+│   │   ├── pep-0320
+│   │   ├── pep-0597
+│   │   ├── pep-0598
+│   │   ├── pep-0346
+│   │   ├── pep-0273
+│   │   ├── pep-0648
+│   │   ├── pep-0352
+│   │   ├── pep-0696
+│   │   ├── pep-0414
+│   │   ├── pep-0366
+│   │   ├── pep-0381
+│   │   ├── pep-0521
+│   │   ├── pep-0383
+│   │   ├── pep-0382
+│   │   ├── pep-0559
+│   │   ├── pep-0533
+│   │   ├── pep-0602
+│   │   ├── pep-0313
+│   │   ├── pep-0334
+│   │   ├── pep-0514
+│   │   ├── pep-0582
+│   │   ├── pep-0378
+│   │   ├── pep-0336
+│   │   ├── pep-0411
+│   │   ├── pep-0340
+│   │   ├── pep-0732
+│   │   ├── pep-0735
+│   │   ├── pep-0469
+│   │   ├── pep-0206
+│   │   ├── pep-0594
+│   │   ├── pep-0500
+│   │   ├── pep-0417
+│   │   ├── pep-0418
+│   │   ├── pep-0419
+│   │   ├── pep-0262
+│   │   ├── pep-0312
+│   │   ├── pep-0265
+│   │   ├── pep-0421
+│   │   ├── pep-0376
+│   │   ├── pep-0397
+│   │   ├── pep-0612
+│   │   ├── pep-3000
+│   │   ├── pep-0210
+│   │   ├── pep-0726
+│   │   ├── pep-0431
+│   │   ├── pep-3104
+│   │   ├── pep-0517
+│   │   ├── pep-0631
+│   │   ├── pep-0638
+│   │   ├── pep-0697
+│   │   ├── pep-0731
+│   │   ├── pep-0207
+│   │   ├── pep-0727
+│   │   ├── pep-0215
+│   │   ├── pep-0218
+│   │   ├── pep-0216
+│   │   ├── pep-0267
+│   │   ├── pep-0286
+│   │   ├── pep-3107
+│   │   ├── pep-0434
+│   │   ├── pep-0765
+│   │   ├── pep-0445
+│   │   ├── pep-0279
+│   │   ├── pep-3113
+│   │   ├── pep-3116
+│   │   ├── pep-0520
+│   │   ├── pep-3144
+│   │   ├── pep-3131
+│   │   ├── pep-3137
+│   │   ├── pep-0283
+│   │   ├── pep-0522
+│   │   ├── pep-3150
+│   │   ├── pep-0579
+│   │   ├── pep-3134
+│   │   ├── pep-3149
+│   │   ├── pep-0714
+│   │   ├── pep-0448
+│   │   ├── pep-0683
+│   │   ├── pep-0636
+│   │   ├── pep-0379
+│   │   ├── pep-8010
+│   │   ├── pep-0750
+│   │   ├── pep-0573
+│   │   ├── pep-0791
+│   │   ├── pep-0588
+│   │   ├── pep-0792
+│   │   ├── pep-0625
+│   │   ├── pep-0763
+│   │   ├── pep-0686
+│   │   ├── pep-0523
+│   │   ├── pep-0733
+│   │   ├── pep-0777
+│   │   ├── pep-3133
+│   │   ├── pep-0757
+│   │   ├── pep-0329
+│   │   ├── pep-0333
+│   │   ├── pep-0515
+│   │   ├── pep-0348
+│   │   ├── pep-0747
+│   │   ├── pep-0758
+│   │   ├── pep-3125
+│   │   ├── pep-3101
+│   │   ├── pep-0272
+│   │   ├── pep-0287
+│   │   ├── pep-0345
+│   │   ├── pep-3106
+│   │   ├── pep-3153
+│   │   ├── pep-0335
+│   │   ├── pep-8106
+│   │   ├── pep-0354
+│   │   ├── pep-0624
+│   │   ├── pep-0479
+│   │   ├── pep-0308
+│   │   ├── pep-0369
+│   │   ├── pep-0290
+│   │   ├── pep-0318
+│   │   ├── pep-0524
+│   │   ├── pep-0611
+│   │   ├── pep-0519
+│   │   ├── pep-0270
+│   │   ├── pep-0748
+│   │   ├── pep-0433
+│   │   ├── pep-0617
+│   │   ├── pep-0568
+│   │   ├── pep-0619
+│   │   ├── pep-0228
+│   │   ├── pep-0614
+│   │   ├── pep-0621
+│   │   ├── pep-0756
+│   │   ├── pep-0592
+│   │   ├── pep-0591
+│   │   ├── pep-0775
+│   │   ├── pep-0615
+│   │   ├── pep-0269
+│   │   ├── pep-0774
+│   │   ├── pep-0738
+│   │   ├── pep-0357
+│   │   ├── pep-0212
+│   │   ├── pep-0639
+│   │   ├── pep-0367
+│   │   ├── pep-0359
+│   │   ├── pep-3136
+│   │   ├── pep-3112
+│   │   ├── pep-0310
+│   │   ├── pep-0739
+│   │   ├── pep-0778
+│   │   ├── pep-0646
+│   │   ├── pep-0311
+│   │   ├── pep-0375
+│   │   ├── pep-0338
+│   │   ├── pep-0746
+│   │   ├── pep-0723
+│   │   ├── pep-0699
+│   │   ├── pep-0724
+│   │   ├── pep-0339
+│   │   ├── pep-0422
+│   │   ├── pep-0713
+│   │   ├── pep-0712
+│   │   ├── pep-0701
+│   │   ├── pep-0725
+│   │   ├── pep-3147
+│   │   ├── pep-0583
+│   │   ├── pep-0609
+│   │   ├── pep-0613
+│   │   ├── pep-0627
+│   │   ├── pep-0678
+│   │   ├── pep-0616
+│   │   ├── pep-0689
+│   │   ├── pep-0675
+│   │   ├── pep-0580
+│   │   ├── pep-0574
+│   │   ├── pep-0487
+│   │   ├── pep-0575
+│   │   ├── pep-0501
+│   │   ├── pep-0584
+│   │   ├── pep-0632
+│   │   ├── pep-0350
+│   │   ├── pep-0351
+│   │   ├── pep-0437
+│   │   ├── pep-0370
+│   │   ├── pep-3146
+│   │   ├── pep-0662
+│   │   ├── pep-0647
+│   │   ├── pep-0470
+│   │   ├── pep-0475
+│   │   ├── pep-0530
+│   │   ├── pep-0486
+│   │   ├── pep-0560
+│   │   ├── pep-0736
+│   │   ├── pep-0373
+│   │   ├── pep-0674
+│   │   ├── pep-0734
+│   │   ├── pep-0490
+│   │   ├── pep-0744
+│   │   ├── pep-0737
+│   │   ├── pep-0372
+│   │   ├── pep-0355
+│   │   ├── pep-0563
+│   │   ├── pep-0593
+│   │   ├── pep-3148
+│   │   ├── pep-0446
+│   │   ├── pep-0344
+│   │   ├── pep-0450
+│   │   ├── pep-0581
+│   │   ├── pep-0430
+│   │   ├── pep-0377
+│   │   ├── pep-0413
+│   │   ├── pep-0749
+│   │   ├── pep-0722
+│   │   ├── pep-0578
+│   │   ├── pep-0426
+│   │   ├── pep-0751
+│   │   ├── pep-0576
+│   │   ├── pep-0444
+│   │   ├── pep-0540
+│   │   ├── pep-0443
+│   │   ├── pep-0451
+│   │   ├── pep-0742
+│   │   ├── pep-0585
+│   │   ├── pep-0459
+│   │   ├── pep-0447
+│   │   ├── pep-0461
+│   │   ├── pep-0586
+│   │   ├── pep-0729
+│   │   ├── pep-0721
+│   │   ├── pep-8002
+│   │   ├── pep-8011
+│   │   ├── pep-3109
+│   │   ├── pep-0427
+│   │   ├── pep-0425
+│   │   ├── pep-0423
+│   │   ├── pep-0587
+│   │   ├── pep-0424
+│   │   ├── pep-0595
+│   │   ├── pep-0728
+│   │   ├── pep-3139
+│   │   ├── pep-0577
+│   │   ├── pep-8105
+│   │   ├── pep-0493
+│   │   ├── pep-0442
+│   │   ├── pep-0605
+│   │   ├── pep-0604
+│   │   ├── pep-3135
+│   │   ├── pep-0608
+│   │   ├── pep-0776
+│   │   ├── pep-0718
+│   │   ├── pep-0606
+│   │   └── pep-3145
+│   ├── docs.python.org
+│   │   ├── 3
+│   │   │   ├── license.html
+│   │   │   ├── tutorial
+│   │   │   │   ├── controlflow.html
+│   │   │   │   ├── introduction.html
+│   │   │   │   ├── classes.html
+│   │   │   │   ├── stdlib2.html
+│   │   │   │   ├── appendix.html
+│   │   │   │   ├── index.html
+│   │   │   │   ├── whatnow.html
+│   │   │   │   ├── interactive.html
+│   │   │   │   ├── datastructures.html
+│   │   │   │   ├── modules.html
+│   │   │   │   ├── appetite.html
+│   │   │   │   ├── stdlib.html
+│   │   │   │   ├── inputoutput.html
+│   │   │   │   ├── errors.html
+│   │   │   │   ├── interpreter.html
+│   │   │   │   ├── floatingpoint.html
+│   │   │   │   └── venv.html
+│   │   │   ├── c-api
+│   │   │   │   └── index.html
+│   │   │   ├── about.html
+│   │   │   ├── contents.html
+│   │   │   ├── bugs.html
+│   │   │   ├── deprecations
+│   │   │   │   └── index.html
+│   │   │   ├── distributing
+│   │   │   │   └── index.html
+│   │   │   ├── copyright.html
+│   │   │   ├── faq
+│   │   │   │   ├── general.html
+│   │   │   │   ├── extending.html
+│   │   │   │   ├── installed.html
+│   │   │   │   ├── library.html
+│   │   │   │   ├── programming.html
+│   │   │   │   ├── index.html
+│   │   │   │   ├── gui.html
+│   │   │   │   ├── design.html
+│   │   │   │   └── windows.html
+│   │   │   ├── download.html
+│   │   │   ├── howto
+│   │   │   │   ├── pyporting.html
+│   │   │   │   ├── index.html
+│   │   │   │   └── free-threading-extensions.html
+│   │   │   ├── genindex.html
+│   │   │   ├── extending
+│   │   │   │   └── index.html
+│   │   │   ├── library
+│   │   │   │   ├── asyncio.html
+│   │   │   │   ├── fractions.html
+│   │   │   │   ├── posix.html
+│   │   │   │   ├── hashlib.html
+│   │   │   │   ├── index.html
+│   │   │   │   ├── select.html
+│   │   │   │   ├── pyexpat.html
+│   │   │   │   ├── ssl.html
+│   │   │   │   ├── trace.html
+│   │   │   │   ├── math.html
+│   │   │   │   ├── xmlrpc.client.html
+│   │   │   │   ├── tracemalloc.html
+│   │   │   │   ├── zlib.html
+│   │   │   │   ├── ctypes.html
+│   │   │   │   ├── tk.html
+│   │   │   │   ├── socket.html
+│   │   │   │   ├── test.html
+│   │   │   │   ├── string.html
+│   │   │   │   ├── decimal.html
+│   │   │   │   ├── idle.html
+│   │   │   │   ├── stdtypes.html
+│   │   │   │   ├── functions.html
+│   │   │   │   ├── copy.html
+│   │   │   │   ├── random.html
+│   │   │   │   └── http.cookies.html
+│   │   │   ├── glossary.html
+│   │   │   ├── index.html
+│   │   │   ├── installing
+│   │   │   │   └── index.html
+│   │   │   ├── py-modindex.html
+│   │   │   ├── reference
+│   │   │   │   ├── expressions.html
+│   │   │   │   ├── compound_stmts.html
+│   │   │   │   ├── index.html
+│   │   │   │   ├── simple_stmts.html
+│   │   │   │   └── lexical_analysis.html
+│   │   │   ├── using
+│   │   │   │   └── index.html
+│   │   │   ├── whatsnew
+│   │   │   │   ├── index.html
+│   │   │   │   ├── 3.13.html
+│   │   │   │   └── changelog.html
+│   │   │   └── search.html
+│   │   ├── faq
+│   │   ├── 3.4
+│   │   │   └── whatsnew
+│   │   │       └── changelog.html
+│   │   ├── 3.14
+│   │   │   ├── using
+│   │   │   │   └── windows.html
+│   │   │   ├── whatsnew
+│   │   │   │   └── 3.14.html
+│   │   │   └── deprecations
+│   │   │       └── index.html
+│   │   ├── 3.13
+│   │   │   ├── library
+│   │   │   │   └── dbm.html
+│   │   │   └── whatsnew
+│   │   │       └── 3.13.html
+│   │   ├── 3.5
+│   │   │   └── whatsnew
+│   │   │       └── changelog.html
+│   │   ├── 3.7
+│   │   │   └── whatsnew
+│   │   │       └── changelog.html
+│   │   ├── 3.6
+│   │   │   └── whatsnew
+│   │   │       └── changelog.html
+│   │   ├── 3.8
+│   │   │   └── whatsnew
+│   │   │       └── changelog.html
+│   │   ├── bugs.html
+│   │   ├── dev
+│   │   ├── devguide
+│   │   ├── license.html
+│   │   └── release
+│   │       ├── 3.10.17
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.10.14
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.10.2
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.10.1
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.10.3
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.10.0
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.10.12
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.10.4
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.10.13
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.10.10
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.10.16
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.10.6
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.10.5
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.10.18
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.10.15
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.10.11
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.10.7
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.10.9
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.10.8
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.11.0
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.11.1
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.11.12
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.11.2
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.11.11
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.11.10
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.11.13
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.11.7
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.11.4
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.11.6
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.11.3
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.11.5
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.13.4
+│   │       │   ├── library
+│   │       │   │   └── ipaddress.html
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.13.5
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.3.1
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.12.4
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.11
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.11.8
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.12.2
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.12.10
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.8.19
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.18
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.8.6
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.11.9
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.12.0
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.3.3
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.7.11
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.8.5
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.12.11
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.8.13
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.13.3
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.23
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.12.5
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.12.8
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.3.4
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.8.20
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.12.1
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.6.14
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.21
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.12.7
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.12.3
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.0
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.8.18
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.1
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.7.15
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.8.4
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.7.14
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.13.2
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.3.2
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.7.16
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.5
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.12.6
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.12.9
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.6
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.13.0
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.8.8
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.7
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.20
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.13.1
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.3.5
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.7.12
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.6.15
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.2
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.4
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.7.17
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.6.12
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.8.3
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.17
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.7.13
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.7.9
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.7.10
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.8.10
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.8.9
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.12
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.3.7
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.8
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.6.13
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.6.11
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.7.8
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.8.11
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.10
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.8.2
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.8.12
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.13
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.9
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.22
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       ├── 3.9.19
+│   │       │   └── whatsnew
+│   │       │       └── changelog.html
+│   │       └── 3.8.7
+│   │           └── whatsnew
+│   │               └── changelog.html
+│   ├── wiki.python.org
+│   │   └── moin
+│   │       ├── PythonBooks
+│   │       ├── BeginnersGuide
+│   │       │   ├── NonProgrammersChinese
+│   │       │   ├── Examples
+│   │       │   ├── Help
+│   │       │   ├── Mathematics
+│   │       │   ├── Overview
+│   │       │   ├── NonProgrammers
+│   │       │   ├── OverviewChinese
+│   │       │   ├── Download
+│   │       │   └── Programmers
+│   │       │       └── SimpleExamples
+│   │       ├── PythonEventsCalendar
+│   │       ├── ScientificProgrammingBooks
+│   │       ├── Tix
+│   │       ├── VietnameseLanguage
+│   │       ├── SpanishPythonBooks
+│   │       ├── SiteImprovements
+│   │       ├── PyCon
+│   │       ├── GermanLanguage
+│   │       ├── DutchLanguage
+│   │       ├── GeorgianLanguage
+│   │       ├── RussianLanguage
+│   │       ├── NorwegianLanguage
+│   │       ├── HindiLanguage
+│   │       ├── Community
+│   │       ├── LithuanianLanguage
+│   │       ├── OriyaLanguage
+│   │       ├── IndonesianLanguage
+│   │       ├── MatsWichmann
+│   │       ├── ArabicPythonBooks
+│   │       ├── Languages?action=AttachFile
+│   │       ├── BeginnerErrorsWithPythonProgramming
+│   │       ├── CatalanLanguage
+│   │       ├── KashmiriLanguage
+│   │       ├── PortugueseLanguage
+│   │       ├── JapanesePythonBooks
+│   │       ├── PolishLanguage
+│   │       ├── DogriLanguage
+│   │       ├── CategoryLanguage
+│   │       ├── CzechLanguage
+│   │       ├── CategoryUnicode
+│   │       ├── Languages?action=info
+│   │       ├── LanguageComparisons
+│   │       ├── Applications
+│   │       ├── BeginnersGuide?action=login
+│   │       ├── AdvancedBooks
+│   │       ├── BurmeseLanguage
+│   │       ├── AfrikaansLanguage
+│   │       ├── UkranianLanguage
+│   │       ├── AlbanianLanguage
+│   │       ├── Asking%20for%20Help
+│   │       ├── ItalianLanguage
+│   │       ├── XhosaLanguage
+│   │       ├── DanishLanguage
+│   │       ├── KannadaLanguage
+│   │       ├── FrenchLanguage
+│   │       ├── Courses
+│   │       ├── CheeseShopDev
+│   │       ├── AmharicLanguage
+│   │       ├── HelpContents
+│   │       ├── BengaliLanguage
+│   │       ├── AssameseLanguage
+│   │       ├── TamilLanguage
+│   │       ├── BosnianLanguage
+│   │       ├── SanskritLanguage
+│   │       ├── BodoLanguage
+│   │       ├── ArmenianLanguage
+│   │       ├── BelarusianLanguage
+│   │       ├── AzerbaijaniLanguage
+│   │       ├── EsperantoLanguage
+│   │       ├── ArabicLanguage
+│   │       ├── BulgarianLanguage
+│   │       ├── GameProgrammingBooks
+│   │       ├── GuiBooks
+│   │       ├── ChineseLanguage
+│   │       ├── PunjabiLanguage
+│   │       ├── FrontPage?action=userprefs
+│   │       ├── CroatianLanguage
+│   │       ├── GujaratiLanguage
+│   │       ├── FindPage
+│   │       ├── EstonianLanguage
+│   │       ├── FinnishLanguage
+│   │       ├── FrontPage
+│   │       ├── AppsWithPythonScripting
+│   │       ├── TagalogLanguage
+│   │       ├── CategoryPyGUI
+│   │       ├── PythonEditors
+│   │       ├── TurkishLanguage
+│   │       ├── GreekLanguage
+│   │       ├── PersianLanguage
+│   │       ├── DutchPythonBooks
+│   │       ├── SloveneLanguage
+│   │       ├── UrduLanguage
+│   │       ├── Documentation
+│   │       ├── KoreanLanguage
+│   │       ├── ZuluLanguage
+│   │       ├── MalayalamLanguage
+│   │       ├── HungarianLanguage
+│   │       ├── SerbianLanguage
+│   │       ├── IntegratedDevelopmentEnvironments
+│   │       ├── HausaLanguage
+│   │       ├── SlovakLanguage
+│   │       ├── HebrewLanguage
+│   │       ├── SinhalaLanguage
+│   │       ├── DevelopmentTools
+│   │       ├── TigrinyaLanguage
+│   │       ├── PersianPythonBooks
+│   │       ├── IcelandicLanguage
+│   │       ├── IgboLanguage
+│   │       ├── FrontPage?action=login
+│   │       ├── BeginnersGuide?action=AttachFile
+│   │       ├── TkInter?action=AttachFile
+│   │       ├── Languages
+│   │       ├── KonkaniLanguage
+│   │       ├── KhmerLanguage
+│   │       ├── KazakhLanguage
+│   │       ├── PythonImplementations
+│   │       ├── PythonEventsCalendar?action=login
+│   │       ├── WesternPunjabiLanguage
+│   │       ├── MongolianLanguage
+│   │       ├── JapaneseLanguage
+│   │       ├── NepaliLanguage
+│   │       ├── MalayLanguage
+│   │       ├── OromoLanguage
+│   │       ├── RomanianLanguage
+│   │       ├── RecentChanges
+│   │       ├── UzbekLanguage
+│   │       ├── MarathiLanguage
+│   │       ├── LaoLanguage
+│   │       ├── SpanishLanguage
+│   │       ├── MaciejOlko
+│   │       ├── Languages?action=login
+│   │       ├── LatvianLanguage
+│   │       ├── ThaiLanguage
+│   │       ├── SwahiliLanguage
+│   │       ├── SwedishLanguage
+│   │       ├── TeluguLanguage
+│   │       ├── WebProgrammingBooks
+│   │       ├── OpenStack
+│   │       ├── PayPal
+│   │       ├── MarcAndreLemburg
+│   │       ├── MythDebunking
+│   │       ├── TrackerDevelopment
+│   │       ├── martinmiller
+│   │       ├── WikiEditingGuidelines
+│   │       ├── GuiProgramming
+│   │       ├── PythonWebsite
+│   │       ├── PythonDiscussions
+│   │       ├── Pmw
+│   │       ├── PolishPythonBooks
+│   │       ├── ReferenceBooks
+│   │       ├── PythonBooks?action=info
+│   │       ├── SystemAdministrationBooks
+│   │       ├── TkInter?action=info
+│   │       ├── HowToEditPythonCode
+│   │       ├── BeginnersGuide?action=info
+│   │       ├── BeginnersGuideChinese
+│   │       ├── KoreanPythonBooks
+│   │       ├── LabEx
+│   │       ├── ZopeBooks
+│   │       ├── SciPy
+│   │       ├── WindowsBooks
+│   │       ├── NumPy
+│   │       ├── PythonConferences
+│   │       ├── PortuguesePythonBooks
+│   │       ├── GermanPythonBooks
+│   │       ├── PythonEventsCalendar?action=info
+│   │       ├── PythonTraining
+│   │       ├── RussianPythonBooks
+│   │       ├── PythonBooks?action=AttachFile
+│   │       ├── PublishingPythonModules
+│   │       ├── JythonBooks
+│   │       ├── CameronLaird
+│   │       ├── PyWeek
+│   │       ├── PyDays
+│   │       ├── EditorsGroup
+│   │       ├── GitHub
+│   │       ├── FrenchPythonBooks
+│   │       ├── TkInter
+│   │       ├── Powerful%20Python%20One-Liners
+│   │       ├── PythonConsulting
+│   │       │   └── Python%202%20support%20and%20migration
+│   │       ├── FrontPage?action=AttachFile
+│   │       ├── CategoryDevelopmentProcess
+│   │       ├── PythonAudioMaterial
+│   │       ├── WhereDoIReportThis%3F
+│   │       ├── PythonSoftwareFoundation
+│   │       ├── OutOfPrintBooks
+│   │       ├── UkrainianPythonBooks
+│   │       ├── WikiAttack2013
+│   │       ├── UsefulModules
+│   │       ├── CategoryDocumentation
+│   │       ├── NetworkProgrammingBooks
+│   │       ├── FrontPage?action=rss_rc
+│   │       ├── FrontPage?action=newaccount
+│   │       ├── FrontPage?action=recoverpass
+│   │       ├── FrontPage?action=info
+│   │       ├── LocalUserGroups
+│   │       ├── WikiGuidelines
+│   │       ├── XmlBooks
+│   │       ├── TkInter?action=login
+│   │       ├── How%20Tkinter%20can%20exploit%20Tcl
+│   │       │   └── Tk%20extensions
+│   │       ├── GUI%20Programming%20in%20Python
+│   │       ├── PythonJobs
+│   │       ├── TkZinc
+│   │       ├── PythonEventsCalendar?action=AttachFile
+│   │       ├── GreekPythonBooks
+│   │       ├── HungarianPythonBooks
+│   │       ├── implementation
+│   │       ├── IntroductoryBooks
+│   │       ├── PythonBooks?action=login
+│   │       ├── PythonEvents
+│   │       ├── PythonPeriodicals
+│   │       ├── Tkinter3000
+│   │       └── PythonProjects
+│   ├── jobs.python.org
+│   ├── mail.python.org
+│   │   ├── mailman
+│   │   │   └── listinfo
+│   │   │       ├── python-dev
+│   │   │       ├── mobile-sig
+│   │   │       ├── python-events
+│   │   │       ├── conferences
+│   │   │       ├── core-mentorship
+│   │   │       ├── tutor
+│   │   │       ├── psf-community
+│   │   │       ├── docs
+│   │   │       ├── jobs
+│   │   │       └── psf-vote
+│   │   ├── archives
+│   │   │   └── list
+│   │   │       └── security-announce%40python.org
+│   │   │           └── latest
+│   │   ├── mailman3
+│   │   │   └── lists
+│   │   └── pipermail
+│   │       └── python-dev
+│   │           └── 2011-March
+│   │               └── 110077.html
+│   ├── policies.python.org
+│   │   ├── python.org
+│   │   │   ├── Privacy-Notice
+│   │   │   ├── code-of-conduct
+│   │   │   │   ├── Procedures-for-Reporting-Incidents
+│   │   │   │   ├── Best-Practices
+│   │   │   │   ├── Enforcement-Procedures
+│   │   │   │   └── Transparency-Report-Guidelines
+│   │   │   ├── Legal-Statements
+│   │   │   ├── Copyright-Policy
+│   │   │   ├── Contributing
+│   │   │   └── CVE-Numbering-Authority
+│   │   ├── PSF-Privacy-Notice
+│   │   ├── us.pycon.org
+│   │   │   ├── Privacy-Notice
+│   │   │   └── code-of-conduct
+│   │   │       ├── Enforcement-Procedures
+│   │   │       └── Procedures-for-Reporting-Incidents
+│   │   ├── reference
+│   │   │   └── SSDF-Request-Response
+│   │   └── pypi.org
+│   │       ├── Terms-of-Use
+│   │       ├── Acceptable-Use-Policy
+│   │       ├── Code-of-Conduct
+│   │       ├── Terms-of-Service
+│   │       └── Privacy-Notice
+│   ├── status.python.org
+│   │   ├── uptime
+│   │   ├── history
+│   │   └── incidents
+│   │       └── tyvdmttyy309
+│   ├── circuitpython.org
+│   ├── discuss.python.org
+│   │   ├── c
+│   │   │   ├── core-dev
+│   │   │   │   └── 23
+│   │   │   ├── help
+│   │   │   ├── ideas
+│   │   │   │   └── 6
+│   │   │   └── packaging
+│   │   └── t
+│   │       ├── python-3-13-5-is-now-available-yes-really
+│   │       │   └── 95211
+│   │       ├── pep-734-multiple-interpreters-in-the-stdlib
+│   │       │   └── 41147
+│   │       │       └── 36
+│   │       └── pep-779-criteria-for-supported-status-for-free-threaded-python
+│   │           └── 84319
+│   │               └── 123
+│   ├── discuss.wxpython.org
+│   ├── ipython.org
+│   │   ├── citing.html
+│   │   ├── donate.html
+│   │   ├── books.html
+│   │   ├── documentation.html
+│   │   ├── ipython-doc
+│   │   │   └── stable
+│   │   │       └── interactive
+│   │   │           └── reference.html
+│   │   ├── news.html
+│   │   ├── presentation.html
+│   │   └── project.html
+│   ├── docs.wxpython.org
+│   ├── extras.wxpython.org
+│   │   └── wxPython4
+│   │       └── extras
+│   │           └── linux
+│   ├── micropython.org
+│   ├── planetpython.org
+│   │   └── titles_only.html
+│   ├── python.org
+│   │   ├── downloads
+│   │   └── psf
+│   ├── pypi.python.org
+│   ├── www.wxpython.org
+│   │   ├── pages
+│   │   │   ├── presentations
+│   │   │   ├── bookshelf
+│   │   │   ├── changes
+│   │   │   ├── overview
+│   │   │   ├── downloads
+│   │   │   ├── irc
+│   │   │   ├── history
+│   │   │   ├── maillists
+│   │   │   ├── contributor-guide
+│   │   │   ├── screenshots
+│   │   │   ├── about-42
+│   │   │   ├── license
+│   │   │   └── how-to-submit-issue
+│   │   ├── news
+│   │   │   ├── 2024-09-11-wxpython-422-release
+│   │   │   │   └── index.html
+│   │   │   ├── 2025-04-09-wxpython-423-release
+│   │   │   │   └── index.html
+│   │   │   └── 2023-06-07-wxpython-411-release
+│   │   │       └── index.html
+│   │   ├── categories
+│   │   ├── archive.html
+│   │   └── blog
+│   ├── wxpython.org
+│   │   └── Phoenix
+│   │       └── docs
+│   │           └── html
+│   ├── wiki.wxpython.org
+│   └── hg.python.org
+│       └── cpython
+│           ├── raw-file
+│           │   ├── 53d30ab403f1
+│           │   │   └── Misc
+│           │   │       └── NEWS
+│           │   ├── v2.7.9
+│           │   │   └── Misc
+│           │   │       └── NEWS
+│           │   ├── v2.7.13
+│           │   │   └── Misc
+│           │   │       └── NEWS
+│           │   ├── v2.7.12
+│           │   │   └── Misc
+│           │   │       └── NEWS
+│           │   └── 15c95b7d81dc
+│           │       └── Misc
+│           │           └── NEWS
+│           └── file
+│               ├── v3.3.6
+│               │   └── Misc
+│               │       └── NEWS
+│               └── v3.2.6
+│                   └── Misc
+│                       └── NEWS
+├── about
+│   ├── gettingstarted
+│   ├── help
+│   ├── apps
+│   ├── legal
+│   ├── quotes
+│   └── website
 ├── accounts
 │   ├── login
-│   └── signup
-├── about
-│   ├── help
-│   ├── gettingstarted
-│   ├── apps
-│   └── quotes
-├── download
-│   ├── alternatives
-│   └── other
+│   ├── signup
+│   └── password
+│       └── reset
+├── dev
+│   ├── security
+│   ├── core-mentorship
+│   ├── buildbot
+│   ├── peps
+│   │   ├── pep-0373
+│   │   ├── pep-0619
+│   │   ├── pep-0664
+│   │   ├── pep-0596
+│   │   ├── pep-0569
+│   │   └── pep-0693
+│   └── pydotorg
 ├── doc
+│   ├── essays
+│   │   ├── blurb
+│   │   ├── cp4e
+│   │   ├── everybody
+│   │   ├── pepparade
+│   │   ├── omg-darpa-mcc-position
+│   │   ├── packages
+│   │   ├── foreword
+│   │   ├── graphs
+│   │   ├── comparisons
+│   │   ├── cleanup
+│   │   ├── foreword2
+│   │   ├── metaclasses
+│   │   ├── refcnt
+│   │   ├── list2str
+│   │   └── stdexceptions
 │   ├── av
 │   ├── versions
-│   └── essays
-├── downloads
-│   ├── operating-systems
+│   ├── faq
+│   │   └── windows
+│   ├── current
+│   │   └── lib
+│   │       └── module-Tix.html
+│   ├── sunset-python-2
+│   └── nonenglish
+├── community
+│   ├── lists
+│   ├── workshops
+│   ├── logos
+│   ├── diversity
+│   ├── sigs
+│   │   ├── current
+│   │   │   ├── capi-sig
+│   │   │   ├── stdlib-sig
+│   │   │   ├── edu-sig
+│   │   │   ├── email-sig
+│   │   │   ├── web-sig
+│   │   │   ├── xml-sig
+│   │   │   ├── distutils-sig
+│   │   │   ├── image-sig
+│   │   │   ├── pythonmac-sig
+│   │   │   ├── import-sig
+│   │   │   ├── i18n-sig
+│   │   │   ├── meta-sig
+│   │   │   ├── mobile-sig
+│   │   │   ├── doc-sig
+│   │   │   ├── db-sig
+│   │   │   └── cplusplus-sig
+│   │   ├── retired
+│   │   └── guidelines
+│   ├── irc
+│   ├── forums
+│   ├── awards
+│   │   ├── psf-awards
+│   │   └── psf-distinguished-awards
+│   ├── jobs
+│   │   └── howto
+│   └── survey
+├── blogs
+├── download
+│   ├── alternatives
+│   ├── other
 │   ├── source
+│   ├── releases
+│   │   └── 2.2
+│   │       └── descrintro
+│   ├── pre-releases
+│   ├── sigstore
+│   └── sbom
+├── downloads
 │   ├── macos
-│   └── windows
-├── success-stories
-│   └── category
-│       ├── engineering
-│       ├── education
-│       ├── arts
-│       └── business
+│   ├── operating-systems
+│   ├── windows
+│   ├── release
+│   │   ├── python-3135
+│   │   ├── python-3923
+│   │   ├── python-31018
+│   │   ├── python-373rc1
+│   │   ├── python-2710
+│   │   ├── python-3922
+│   │   ├── python-271
+│   │   ├── python-2712
+│   │   ├── python-2711
+│   │   ├── python-31211
+│   │   ├── python-350b1
+│   │   ├── python-3134
+│   │   ├── python-350a3
+│   │   ├── python-345
+│   │   ├── python-3140b2
+│   │   ├── python-3130rc1
+│   │   ├── python-360
+│   │   ├── python-3130rc2
+│   │   ├── python-3814
+│   │   ├── python-3140a5
+│   │   ├── python-3132
+│   │   ├── python-3131
+│   │   ├── python-333
+│   │   ├── python-380a3
+│   │   ├── python-3130rc3
+│   │   ├── python-383rc1
+│   │   ├── python-377
+│   │   ├── python-376
+│   │   ├── python-384
+│   │   ├── python-386
+│   │   ├── python-321
+│   │   ├── python-386rc1
+│   │   ├── python-334
+│   │   ├── python-3100
+│   │   ├── python-2714
+│   │   ├── python-372
+│   │   ├── python-341
+│   │   ├── python-383
+│   │   ├── python-352
+│   │   ├── python-342
+│   │   ├── python-31113
+│   │   ├── python-320
+│   │   ├── python-389
+│   │   ├── python-367
+│   │   ├── python-384rc1
+│   │   ├── python-3140a6
+│   │   ├── python-314
+│   │   ├── python-263
+│   │   ├── python-264
+│   │   ├── python-374
+│   │   ├── python-368
+│   │   ├── python-261
+│   │   ├── python-340
+│   │   ├── python-365
+│   │   ├── python-370
+│   │   ├── python-3140rc1
+│   │   ├── python-279
+│   │   ├── python-3140b1
+│   │   ├── python-310
+│   │   ├── python-3133
+│   │   ├── python-301
+│   │   ├── python-335
+│   │   ├── python-378
+│   │   ├── python-3140b4
+│   │   ├── python-3140b3
+│   │   ├── python-3818
+│   │   ├── python-381rc1
+│   │   ├── python-3819
+│   │   ├── python-390a3
+│   │   ├── python-390a2
+│   │   ├── python-3820
+│   │   ├── python-368rc1
+│   │   ├── python-265
+│   │   ├── python-262
+│   │   ├── python-2717
+│   │   ├── python-313
+│   │   ├── python-3130b4
+│   │   ├── python-343
+│   │   ├── python-325
+│   │   ├── python-344
+│   │   ├── python-3120a5
+│   │   ├── python-373
+│   │   ├── python-375
+│   │   ├── python-354rc1
+│   │   ├── python-336
+│   │   ├── python-3125
+│   │   ├── python-3110a2
+│   │   ├── python-274
+│   │   ├── python-3140a4
+│   │   ├── python-3118
+│   │   ├── python-3109
+│   │   ├── python-345rc1
+│   │   ├── python-3110
+│   │   ├── python-3116
+│   │   ├── python-3113
+│   │   ├── python-3117
+│   │   ├── python-3119
+│   │   ├── python-3110a6
+│   │   ├── python-3122
+│   │   ├── python-223
+│   │   ├── python-3120
+│   │   ├── python-312
+│   │   ├── python-322
+│   │   ├── python-331
+│   │   ├── python-31210
+│   │   ├── python-311
+│   │   ├── python-273
+│   │   ├── python-343rc1
+│   │   ├── python-3105
+│   │   ├── python-270
+│   │   ├── python-344rc1
+│   │   ├── python-392
+│   │   ├── python-3124
+│   │   ├── python-381
+│   │   ├── python-395
+│   │   ├── python-394
+│   │   ├── python-3140a1
+│   │   ├── python-382
+│   │   ├── python-364
+│   │   ├── python-2717rc1
+│   │   ├── python-235
+│   │   ├── python-3127
+│   │   ├── python-399
+│   │   ├── python-3110b1
+│   │   ├── python-397
+│   │   ├── python-347
+│   │   ├── python-255
+│   │   ├── python-3120a1
+│   │   ├── python-3114
+│   │   ├── python-348rc1
+│   │   ├── python-351
+│   │   ├── python-242
+│   │   ├── python-3103
+│   │   ├── python-3123
+│   │   ├── python-387
+│   │   ├── python-324
+│   │   ├── python-350
+│   │   ├── python-361
+│   │   ├── python-366
+│   │   ├── python-353
+│   │   ├── python-390
+│   │   ├── python-385
+│   │   ├── python-3107
+│   │   ├── python-363
+│   │   ├── python-391
+│   │   ├── python-362
+│   │   ├── python-3910
+│   │   ├── python-371
+│   │   ├── python-380rc1
+│   │   ├── python-3112
+│   │   ├── python-3115
+│   │   ├── python-3130
+│   │   ├── python-3110b3
+│   │   ├── python-3102
+│   │   ├── python-380
+│   │   ├── python-3121
+│   │   ├── python-3911
+│   │   ├── python-3129
+│   │   ├── python-3140a2
+│   │   ├── python-3106
+│   │   ├── python-3104
+│   │   ├── python-3913
+│   │   ├── python-3108
+│   │   ├── python-2718
+│   │   ├── python-2713
+│   │   ├── python-3120a6
+│   │   ├── python-31013
+│   │   ├── python-342rc1
+│   │   ├── python-2711rc1
+│   │   ├── python-2715
+│   │   ├── python-388rc1
+│   │   ├── python-315
+│   │   ├── python-360b2
+│   │   ├── python-323
+│   │   ├── python-275
+│   │   ├── python-354
+│   │   ├── python-3919
+│   │   ├── python-380b2
+│   │   ├── python-252
+│   │   ├── python-266
+│   │   ├── python-3710
+│   │   ├── python-398
+│   │   ├── python-3915
+│   │   ├── python-396
+│   │   ├── python-362rc2
+│   │   ├── python-3615
+│   │   ├── python-31112
+│   │   ├── python-3126
+│   │   ├── python-278
+│   │   ├── python-337rc1
+│   │   ├── python-350rc4
+│   │   ├── python-336rc1
+│   │   ├── python-330
+│   │   ├── python-3140a7
+│   │   ├── python-332
+│   │   ├── python-379
+│   │   ├── python-244
+│   │   ├── python-277
+│   │   ├── python-31010
+│   │   ├── python-390a4
+│   │   ├── python-350b4
+│   │   ├── python-3811
+│   │   ├── python-3611rc1
+│   │   ├── python-233
+│   │   ├── python-2716
+│   │   ├── python-348
+│   │   ├── python-31011
+│   │   ├── python-377rc1
+│   │   ├── python-3810
+│   │   ├── python-3110rc2
+│   │   ├── python-3120b3
+│   │   ├── python-253
+│   │   ├── python-360a4
+│   │   ├── python-254
+│   │   ├── python-380b1
+│   │   ├── python-3100a2
+│   │   ├── python-279rc1
+│   │   ├── python-3140a3
+│   │   ├── python-3100a7
+│   │   ├── python-388
+│   │   ├── python-350rc2
+│   │   ├── python-350rc1
+│   │   ├── python-3130b3
+│   │   ├── python-221
+│   │   ├── python-245
+│   │   ├── python-3111
+│   │   ├── python-222
+│   │   ├── python-349rc1
+│   │   ├── python-3128
+│   │   ├── python-31110
+│   │   ├── python-31012
+│   │   ├── python-358rc1
+│   │   ├── python-260
+│   │   ├── python-246
+│   │   ├── python-3101
+│   │   ├── python-360a3
+│   │   ├── python-362rc1
+│   │   ├── python-361rc1
+│   │   ├── python-356rc1
+│   │   ├── python-3410
+│   │   ├── python-251
+│   │   ├── python-3912
+│   │   ├── python-337
+│   │   ├── python-3130a3
+│   │   ├── python-250
+│   │   ├── python-350b2
+│   │   ├── python-272
+│   │   ├── python-3410rc1
+│   │   ├── python-355rc1
+│   │   ├── python-31015
+│   │   ├── python-300
+│   │   ├── python-201
+│   │   ├── python-276
+│   │   ├── pymanager-250b9
+│   │   ├── python-31111
+│   │   ├── python-3120b4
+│   │   ├── python-3120a2
+│   │   ├── python-3120b1
+│   │   ├── python-3120rc1
+│   │   ├── python-3816
+│   │   ├── python-3100b4
+│   │   ├── python-3100b3
+│   │   ├── python-236
+│   │   ├── python-350a4
+│   │   ├── python-380b4
+│   │   ├── python-3813
+│   │   ├── python-240
+│   │   ├── python-390b3
+│   │   ├── python-2714rc1
+│   │   ├── python-237
+│   │   ├── python-380b3
+│   │   ├── python-241
+│   │   ├── python-380a4
+│   │   ├── python-2712rc1
+│   │   ├── python-2710rc1
+│   │   ├── python-3120rc2
+│   │   ├── python-268
+│   │   ├── python-3815
+│   │   ├── python-3614
+│   │   ├── python-256
+│   │   ├── python-267
+│   │   ├── python-220
+│   │   ├── python-3130a1
+│   │   ├── python-387rc1
+│   │   ├── python-2713rc1
+│   │   ├── python-391rc1
+│   │   ├── python-350rc3
+│   │   ├── python-340rc3
+│   │   ├── python-390b5
+│   │   ├── python-360rc1
+│   │   ├── python-390rc1
+│   │   ├── python-3610
+│   │   ├── python-3130a6
+│   │   ├── python-3130a5
+│   │   ├── python-350a1
+│   │   ├── python-3110a1
+│   │   ├── python-350b3
+│   │   ├── python-390rc2
+│   │   ├── python-326
+│   │   ├── python-3130a2
+│   │   ├── pymanager-250b10
+│   │   ├── python-350a2
+│   │   ├── python-3510
+│   │   ├── python-357
+│   │   ├── python-3916
+│   │   ├── python-3130a4
+│   │   ├── python-277rc1
+│   │   ├── python-390a1
+│   │   ├── python-3100a1
+│   │   ├── python-3110b4
+│   │   ├── python-3120a7
+│   │   ├── python-3110b5
+│   │   ├── python-31016
+│   │   ├── python-364rc1
+│   │   ├── python-367rc2
+│   │   ├── python-3100a3
+│   │   ├── python-3100a4
+│   │   ├── python-390b4
+│   │   ├── python-3110rc1
+│   │   ├── python-390b2
+│   │   ├── python-234
+│   │   ├── python-3921
+│   │   ├── python-2716rc1
+│   │   ├── python-2718rc1
+│   │   ├── python-366rc1
+│   │   ├── python-3100a5
+│   │   ├── python-3110a7
+│   │   ├── python-269
+│   │   ├── python-3100a6
+│   │   ├── python-230
+│   │   ├── python-349
+│   │   ├── python-3110a3
+│   │   ├── python-3120a3
+│   │   ├── python-376rc1
+│   │   ├── python-3100b1
+│   │   ├── python-390a6
+│   │   ├── python-31014
+│   │   ├── python-390a5
+│   │   ├── python-382rc2
+│   │   ├── python-3716
+│   │   ├── python-369rc1
+│   │   ├── python-3100b2
+│   │   ├── python-382rc1
+│   │   ├── python-31017
+│   │   ├── python-3918
+│   │   ├── python-3712
+│   │   ├── python-3917
+│   │   ├── python-3920
+│   │   ├── python-3812
+│   │   ├── python-3713
+│   │   ├── python-372rc1
+│   │   ├── python-243
+│   │   ├── python-2715rc1
+│   │   ├── python-380a1
+│   │   ├── python-352rc1
+│   │   ├── python-3110a4
+│   │   ├── python-3610rc1
+│   │   ├── python-363rc1
+│   │   ├── python-3100rc2
+│   │   ├── python-3110b2
+│   │   ├── python-3717
+│   │   ├── python-371rc1
+│   │   ├── python-3110a5
+│   │   ├── python-3715
+│   │   ├── python-370a2
+│   │   ├── python-371rc2
+│   │   ├── python-3120a4
+│   │   ├── python-341rc1
+│   │   ├── python-3120b2
+│   │   ├── python-335rc2
+│   │   ├── python-378rc1
+│   │   ├── python-356
+│   │   ├── python-3817
+│   │   ├── python-358
+│   │   ├── python-358rc2
+│   │   ├── python-370b2
+│   │   ├── python-369
+│   │   ├── python-3914
+│   │   ├── python-392rc1
+│   │   ├── python-360b1
+│   │   ├── python-367rc1
+│   │   ├── python-3100rc1
+│   │   ├── python-360a1
+│   │   ├── python-375rc1
+│   │   ├── python-370b1
+│   │   ├── python-390b1
+│   │   ├── python-3613
+│   │   ├── python-213
+│   │   ├── python-3612
+│   │   ├── python-3611
+│   │   ├── python-359
+│   │   ├── python-380a2
+│   │   ├── pymanager-250b11
+│   │   ├── python-231
+│   │   ├── python-360rc2
+│   │   ├── python-370b5
+│   │   ├── python-3120rc3
+│   │   ├── python-360b3
+│   │   ├── python-335rc1
+│   │   ├── pymanager-250b12
+│   │   ├── python-335-rc1
+│   │   ├── python-326rc1
+│   │   ├── python-357rc1
+│   │   ├── python-3130b1
+│   │   ├── python-232
+│   │   ├── python-3130b2
+│   │   ├── python-346rc1
+│   │   ├── python-347rc1
+│   │   ├── python-370a3
+│   │   ├── python-3711
+│   │   ├── python-3510rc1
+│   │   ├── python-351rc1
+│   │   ├── python-346
+│   │   ├── python-365rc1
+│   │   ├── python-353rc1
+│   │   ├── python-355
+│   │   ├── python-370a1
+│   │   ├── python-360a2
+│   │   ├── python-3714
+│   │   ├── python-374rc1
+│   │   ├── python-360b4
+│   │   ├── python-370a4
+│   │   └── python-370rc1
+│   ├── source
+│   ├── latest
+│   │   └── pymanager
+│   ├── metadata
+│   │   ├── pgp
+│   │   └── sigstore
+│   └── unpacking
+├── events
+│   ├── python-events
+│   │   ├── 2077
+│   │   ├── 1971
+│   │   ├── 2011
+│   │   ├── 1973
+│   │   ├── past
+│   │   ├── 1995
+│   │   ├── locations
+│   │   │   ├── 1600
+│   │   │   ├── 841
+│   │   │   ├── 1573
+│   │   │   └── 1342
+│   │   ├── 2074
+│   │   ├── 2078
+│   │   ├── 745
+│   │   ├── 1889
+│   │   ├── 2036
+│   │   ├── 2072
+│   │   ├── 2002
+│   │   ├── 2009
+│   │   ├── 1999
+│   │   ├── 2018
+│   │   ├── 1972
+│   │   ├── 1993
+│   │   ├── 1963
+│   │   ├── 2015
+│   │   ├── 2017
+│   │   ├── 1991
+│   │   ├── 1881
+│   │   ├── 2027
+│   │   ├── 1989
+│   │   ├── 2019
+│   │   ├── 1651
+│   │   ├── 1848
+│   │   ├── 1894
+│   │   ├── 2021
+│   │   ├── 1994
+│   │   ├── 2084
+│   │   ├── 1785
+│   │   ├── 1560
+│   │   ├── 2024
+│   │   ├── 2083
+│   │   ├── 2020
+│   │   ├── 2023
+│   │   ├── 2071
+│   │   ├── 2034
+│   │   ├── 2022
+│   │   ├── 2031
+│   │   ├── 2076
+│   │   ├── 2033
+│   │   ├── 2000
+│   │   ├── 1982
+│   │   ├── 1888
+│   │   ├── 1896
+│   │   ├── 2016
+│   │   ├── 2032
+│   │   └── 2010
+│   ├── python-user-group
+│   │   ├── 2081
+│   │   ├── past
+│   │   ├── 2086
+│   │   ├── 2082
+│   │   ├── 685
+│   │   ├── 2080
+│   │   ├── 2030
+│   │   ├── 2038
+│   │   ├── 2039
+│   │   ├── 2079
+│   │   ├── 1967
+│   │   ├── 1840
+│   │   ├── 2075
+│   │   ├── 2085
+│   │   ├── locations
+│   │   │   └── 794
+│   │   └── 1512
+│   └── calendars
 ├── psf
+│   ├── community-stories
 │   ├── conduct
 │   ├── annual-report
 │   │   └── 2024
-│   ├── community-stories
-│   └── get-involved
-└── jobs
+│   ├── donations
+│   │   ├── python-dev
+│   │   ├── 2024-q4-drive
+│   │   ├── matching-gifts
+│   │   └── 2021-q4-drive
+│   ├── membership
+│   │   └── supporting
+│   ├── get-involved
+│   ├── newsletter
+│   ├── records
+│   │   ├── board
+│   │   │   └── minutes
+│   │   │       └── 2014-01-06
+│   │   └── staff
+│   ├── faq
+│   ├── license
+│   ├── grants
+│   │   └── faq
+│   ├── mission
+│   ├── news-and-community
+│   ├── sponsorship
+│   ├── trademarks
+│   ├── volunteer
+│   │   └── pycon
+│   ├── workgroups
+│   ├── about
+│   │   └── legal-and-policies
+│   ├── fiscal-sponsorees
+│   ├── developersinresidence
+│   ├── membership-faq
+│   ├── sponsors
+│   ├── board
+│   ├── diversity
+│   ├── fellows-roster
+│   ├── fellows
+│   ├── videos
+│   └── sponsorship-new
+├── psf-landing
+├── jobs
+│   ├── 7876
+│   ├── type
+│   │   ├── cloud
+│   │   ├── back-end
+│   │   ├── finance
+│   │   ├── big-data
+│   │   ├── database
+│   │   ├── operations
+│   │   ├── front-end
+│   │   ├── integration
+│   │   ├── systems
+│   │   ├── testing
+│   │   ├── machine-learning
+│   │   ├── numeric-processing
+│   │   ├── web
+│   │   ├── management
+│   │   ├── text-processing
+│   │   ├── lead
+│   │   └── image-processing
+│   ├── location
+│   │   ├── toronto-ontario-canada
+│   │   ├── remote-any-worldwide
+│   │   ├── amsterdam-netherlands
+│   │   ├── macclesfieldgothenburg-uksweden
+│   │   ├── telecommute
+│   │   ├── austin-texas-united-states
+│   │   ├── basel-switzerland-switzerland
+│   │   ├── full-remote-full-remote-full-remote
+│   │   ├── bogota-medellin-or-cartagena-cundinamarca-antioquia-or-bolivar-colombia
+│   │   ├── cascina-pi-tuscany-italy
+│   │   ├── remote-usa-only-usa
+│   │   ├── rome-italy
+│   │   ├── pavia-lombardy-italy
+│   │   ├── remote-remote-united-states-of-america
+│   │   ├── remote-remote-remote
+│   │   ├── san-francisco-ca-united-states
+│   │   ├── london-select-state-united-kingdom
+│   │   ├── amsterdam-the-netherlands
+│   │   ├── hyderabad-telangana-india
+│   │   ├── brooklyn-ny-united-states
+│   │   ├── remote-remote-usa
+│   │   ├── san-francisco-california-united-states
+│   │   ├── new-york-new-york-united-states
+│   │   ├── london-greater-london-united-kingdom
+│   │   ├── hanover-us
+│   │   ├── london-london-united-kingdom
+│   │   ├── madrid-ca-spain
+│   │   ├── new-york-nueva-york-united-state
+│   │   ├── medellin-cartagena-bogota-cundinamarca-antioquia-bolivar-colombia
+│   │   ├── holyoke-ma-united-states
+│   │   ├── remote-global
+│   │   └── warsaw-poland
+│   ├── 7935
+│   ├── create
+│   ├── feed
+│   │   └── rss
+│   ├── category
+│   │   ├── researcher-scientist
+│   │   ├── manager-executive
+│   │   └── developer-engineer
+│   ├── locations
+│   ├── 7920
+│   ├── 7919
+│   ├── 7937
+│   ├── 7916
+│   ├── 7917
+│   ├── 7923
+│   ├── 7925
+│   ├── 7926
+│   ├── 7931
+│   ├── 7929
+│   ├── 7928
+│   ├── categories
+│   ├── 7875
+│   ├── 7877
+│   ├── 7938
+│   ├── 7914
+│   ├── 7918
+│   ├── 7913
+│   ├── 7879
+│   ├── 7936
+│   ├── 7878
+│   ├── 7933
+│   ├── types
+│   ├── 7880
+│   └── 7921
+├── shell
+├── success-stories
+│   ├── a-startup-healthcare-tech-firm-is-now-poised-for-the-future
+│   ├── category
+│   │   ├── education
+│   │   ├── business
+│   │   ├── arts
+│   │   ├── engineering
+│   │   ├── scientific
+│   │   ├── government
+│   │   ├── software-development
+│   │   └── data-science
+│   ├── abridging-clinical-conversations-using-python
+│   ├── using-python-for-marketplace-development-under-tight-deadlines
+│   ├── getting-to-know-python
+│   ├── frequentis-taptools-python-in-air-traffic-control
+│   ├── python-to-control-cddvd-packaging-hardware
+│   ├── python-seo-link-analyzer
+│   ├── using-python-to-make-unstable-apis-reliable
+│   ├── python-for-collaborative-drug-discovery
+│   ├── distributed-system-for-technology-integration
+│   ├── using-python-to-build-a-solution-for-instant-tokenized-real-estate-redemptions
+│   ├── python-powered-crosscompute-report-automation-for-ereliability-tracker-leads-to-cost-and-time-savings-for-the-american-public-power-association-updated-20210526-0900
+│   ├── python-for-collaborative-robots
+│   ├── saving-the-world-with-open-data-and-python
+│   ├── why-python-matters-for-the-vr-community
+│   ├── simulating-biomolecules-with-python
+│   ├── making-our-new-website-and-admin-work-together-using-python
+│   ├── deliver-clean-and-safe-code-for-your-python-applications
+│   ├── carmanah-lights-the-way-with-python
+│   ├── python-on-guard
+│   ├── how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python
+│   ├── zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning
+│   ├── caldintav-python-for-high-speed-railway-bridges
+│   ├── building-robust-codebases-with-pythons-type-annotations
+│   ├── vacation-rental-marketplace-development-using-python
+│   ├── python-for-scientific-data-visualization
+│   ├── securing-python-runtimes
+│   ├── python-powers-journyx-timesheet
+│   ├── reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas
+│   ├── a-custom-image-viewing-game-for-an-autistic-child
+│   ├── building-an-open-source-and-cross-platform-azure-cli-with-python
+│   ├── elementary-school-education-is-it-love-or-just-python
+│   ├── d-link-australia
+│   ├── create
+│   ├── lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos
+│   ├── python-for-financial-machine-learning-at-union-investment
+│   ├── using-python-to-develop-a-patient-health-portal
+│   ├── python-in-a-classic-enterprise-setting-hand-rolled-microservices-for-supply-chain-erp
+│   ├── using-python-to-automate-tedious-tasks
+│   ├── python-provides-convenience-and-flexibility-for-scalable-mlai
+│   ├── how-we-created-a-python-development-framework-for-non-developers
+│   ├── python-is-rackspaces-core-technology
+│   ├── building-a-dependency-graph-of-our-python-codebase
+│   ├── python-in-the-blind-audio-tactile-mapping-system
+│   ├── ezro-content-management-system
+│   ├── using-python-for-commercial-cloud-backup
+│   ├── using-python-with-gretelai-to-generate-synthetic-location-data
+│   ├── python-to-help-meteorologists
+│   ├── building-an-online-pharmacy-marketplace-with-python
+│   ├── wordstream-uses-python-as-their-platform-of-choice
+│   ├── bleeding-edge-dependency-testing-using-python
+│   ├── xist-an-xml-transformation-engine
+│   ├── avoiding-documentation-costs-with-python
+│   └── using-python-to-build-a-range-of-products-across-multiple-industries
+├── Help.html
+├── patches
+├── search
+├── mailman
+│   └── listinfo
+│       └── tutor
+├── ~guido
+├── sigs
+│   ├── edu-sig
+│   └── doc-sig
+├── ftp
+│   └── python
+│       └── pymanager
+├── sponsors
+│   └── application
+├── nominations
+│   └── elections
+├── privacy
+└── users
+    └── membership

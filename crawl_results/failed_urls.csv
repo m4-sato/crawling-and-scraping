@@ -1,0 +1,39 @@
+url,path,depth,type,status_code,success,error,redirect_to,redirect_hops
+http://advocacy.python.org/podcasts,http://advocacy.python.org/podcasts,2,page,,False,"Unexpected error in _crawl_web at line 763 in _crawl_web (.venv\lib\site-packages\crawl4ai\async_crawler_strategy.py):
+Error: Failed on navigating ACS-GOTO:
+Page.goto: net::ERR_NAME_NOT_RESOLVED at http://advocacy.python.org/podcasts
+Call log:
+  - navigating to ""http://advocacy.python.org/podcasts"", waiting until ""domcontentloaded""
+
+
+Code context:
+ 758                               tag=""GOTO"",
+ 759                               params={""url"": url},
+ 760                           )
+ 761                           response = None
+ 762                       else:
+ 763 →                         raise RuntimeError(f""Failed on navigating ACS-GOTO:\n{str(e)}"")
+ 764   
+ 765                   await self.execute_hook(
+ 766                       ""after_goto"", page, context=context, url=url, response=response, config=config
+ 767                   )
+ 768   ",,0
+https://docs.python.org/3/search.html,https://docs.python.org/3/search.html,2,page,,False,"Unexpected error in _crawl_web at line 763 in _crawl_web (.venv\lib\site-packages\crawl4ai\async_crawler_strategy.py):
+Error: Failed on navigating ACS-GOTO:
+Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to ""https://docs.python.org/3/search.html"", waiting until ""domcontentloaded""
+
+
+Code context:
+ 758                               tag=""GOTO"",
+ 759                               params={""url"": url},
+ 760                           )
+ 761                           response = None
+ 762                       else:
+ 763 →                         raise RuntimeError(f""Failed on navigating ACS-GOTO:\n{str(e)}"")
+ 764   
+ 765                   await self.execute_hook(
+ 766                       ""after_goto"", page, context=context, url=url, response=response, config=config
+ 767                   )
+ 768   ",,0

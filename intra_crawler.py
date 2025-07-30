@@ -144,6 +144,8 @@ except ImportError:
 from typing import Iterable
 from urllib.parse import urlparse
 
+import requests                    # ★ NEW 追跡用
+
 # ---------- ① SchemeFilter を自前定義 ★ NEW ----------
 class SchemeFilter:
     """http/https 以外 (mailto:, news:, javascript: など) を除外"""
@@ -160,7 +162,7 @@ class SchemeFilter:
 
 # ----------- 必要に応じて書き換え -----------
 ROOT_URL  = os.getenv("ROOT_URL",  "https://www.python.org/")
-MAX_DEPTH = int(os.getenv("MAX_DEPTH", 3))
+MAX_DEPTH = int(os.getenv("MAX_DEPTH", 100))
 MAX_PAGES = int(os.getenv("MAX_PAGES", 2000))
 OUTPUT_DIR = Path(os.getenv("OUTPUT_DIR", "crawl_results"))
 # -------------------------------------------
@@ -225,6 +227,20 @@ async def crawl() -> None:
         path  = strip_base(res.url, base)
         is_file = os.path.splitext(path)[1].lower() in FILE_EXTS
 
+
+        redirect_to = ""                          # ★ NEW
+        redirect_hops = 0                         # ★ NEW
+
+        # ---------- 3xx の場合に最終 URL を追跡 ----------
+        if 300 <= (res.status_code or 0) < 400:
+            try:
+                r = requests.get(res.url, allow_redirects=True, timeout=10)
+                redirect_to = r.url
+                redirect_hops = len(r.history)
+            except requests.RequestException as e:
+                redirect_to = f"ERROR: {e.__class__.__name__}"
+        # --------------------------------------------------
+
         site_rows.append({
             "url": res.url,
             "path": path,
@@ -233,6 +249,8 @@ async def crawl() -> None:
             "status_code": res.status_code,
             "success": res.success,
             "error": res.error_message or "",
+            "redirect_to": redirect_to,
+            "redirect_hops": redirect_hops,
         })
         tree_paths.append((depth, path))
 
