@@ -3,10 +3,14 @@ name = "uv-docker-example"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 dependencies = [
     "httpx",
 ]
+
+[project.dependencies]
+crawl4ai = {extras = ["client"], version = "^0.7"}   # SDK だけで十分
+pandas     = "^2.2"
 
 [build-system]
 requires = ["hatchling"]
