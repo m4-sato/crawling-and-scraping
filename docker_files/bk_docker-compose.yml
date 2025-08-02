@@ -1,0 +1,71 @@
+# # services:
+# #   # このプロジェクトのクローラーサービス
+# #   crawler:
+# #     build: .
+# #     container_name: crawler_client
+# #     # crawl4aiサービスがhealthy状態になるまで待機する
+# #     env_file:
+# #       - .env
+# #     volumes:
+# #       - .:/app
+# #       - /app/.venv
+# #     depends_on:
+# #       crawl4ai:
+# #         condition: service_healthy
+
+# #   # 依存するcrawl4aiサービス
+# #   crawl4ai:
+# #     # crawl4aiの公式イメージなどを指定
+# #     image: unclecode/crawl4ai:latest
+# #     container_name: crawl4ai
+# #     ports:
+# #       - "11235:11235"
+# #     # 必要に応じてボリュームや環境変数を設定
+
+# services:
+#   # REST API サーバー
+#   crawl4ai:
+#     image: unclecode/crawl4ai:latest # 0.6 系安定版。0.7 機能を試すなら :0.7.0-r1
+#     container_name: crawl4ai
+#     ports:
+#       - "11235:11235"
+#     shm_size: "1g"
+#     healthcheck: # /health エンドポイントで起動完了を判定
+#       test: ["CMD", "curl", "-f", "http://localhost:11235/health"]
+#       interval: 30s
+#       timeout: 10s
+#       retries: 5
+
+#   # クライアント（このプロジェクト）
+#   crawler:
+#     build: .
+#     container_name: crawler_client
+#     env_file:
+#       - .env
+
+#     depends_on:
+#       crawl4ai:
+#         condition: service_healthy
+
+services:
+  crawl4ai:
+    image: unclecode/crawl4ai:0.7.0-r1 # ★ 0.7 系に固定
+    container_name: crawl4ai
+    ports:
+      - "11235:11235"
+    shm_size: "1g"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11235/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  crawler:
+    build: .
+    container_name: crawler_client
+    env_file:
+      - .env
+    # volumes: - .:/app     # ← 開発時だけ有効に
+    depends_on:
+      crawl4ai:
+        condition: service_healthy

@@ -1,24 +1,19 @@
-##### 1️⃣ LOCK ステージ #####
-FROM ghcr.io/astral-sh/uv:python3.12-bookworm-slim AS lock
-WORKDIR /app
-COPY pyproject.toml .
-RUN --mount=type=cache,target=/root/.cache/uv \
-    uv lock
+FROM mcr.microsoft.com/playwright/python:v1.54.0-jammy
 
-##### 2️⃣ RUNTIME ステージ #####
-FROM ghcr.io/astral-sh/uv:python3.12-bookworm-slim
+ARG DEBIAN_FRONTEND=noninteractive
 WORKDIR /app
 
-COPY --from=lock /app/uv.lock uv.lock
-COPY pyproject.toml .
+# ---- 1️⃣ ビルド用ツールと開発ヘッダ ----
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential python3-dev libffi-dev zlib1g-dev libxml2-dev libxslt1-dev \
+ && rm -rf /var/lib/apt/lists/*
 
-RUN --mount=type=cache,target=/root/.cache/uv \
-    uv sync --locked --no-install-project --no-dev
+# ---- 2️⃣ Python ライブラリ ----
+COPY requirements.txt .
+RUN pip install --upgrade pip \
+ && pip install --no-cache-dir --prefer-binary -r requirements.txt
 
-COPY . /app
-RUN --mount=type=cache,target=/root/.cache/uv \
-    uv sync --locked --no-dev
+# ---- 3️⃣ アプリコード ----
+COPY tutorial_basic_crawl.py .
 
-ENV PATH="/app/.venv/bin:$PATH"
-ENTRYPOINT []
-CMD ["python", "intra_crawler.py"]
+CMD ["python", "tutorial_basic_crawl.py"]
